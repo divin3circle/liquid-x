@@ -18,10 +18,10 @@ export function WorkLine() {
           <p
             className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
           >
-            With an intuitive interface users can effortlessly connect their
-            digital wallets across multiple blockchains. Once connected, explore
-            available liquidity pools and cross-chain opportunities, accessing a
-            consolidated view of their digital assets.
+            Effortlessly connect your digital wallets across multiple
+            blockchains. Once connected, explore available liquidity pools and
+            cross-chain opportunities, accessing a consolidated view of their
+            digital assets.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -64,9 +64,9 @@ export function WorkLine() {
             className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
           >
             LiquidX streamlines the process of moving assets between different
-            blockchains for lending and borrowing purposes. Users can deposit
-            collateral on one chain and borrow on another without the need for
-            costly bridging fees, slippage, or time-consuming processes.
+            blockchains for lending and borrowing purposes. Deposit collateral
+            on one chain and borrow on another without the need for costly
+            bridging fees, slippage, or time-consuming processes.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
