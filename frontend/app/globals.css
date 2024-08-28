@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --text-50: #eae9fc;
@@ -16,7 +15,7 @@
     --text-800: #140c5a;
     --text-900: #0a062d;
     --text-950: #050316;
-    
+
     --background-50: #f2f2f2;
     --background-100: #e6e6e6;
     --background-200: #cccccc;
@@ -28,7 +27,7 @@
     --background-800: #333333;
     --background-900: #1a1a1a;
     --background-950: #0d0d0d;
-    
+
     --primary-50: #eaeefa;
     --primary-100: #d5def6;
     --primary-200: #abbded;
@@ -40,7 +39,7 @@
     --primary-800: #122454;
     --primary-900: #09122a;
     --primary-950: #050915;
-    
+
     --secondary-50: #e7e5ff;
     --secondary-100: #cfccff;
     --secondary-200: #9e99ff;
@@ -52,7 +51,7 @@
     --secondary-800: #050066;
     --secondary-900: #030033;
     --secondary-950: #01001a;
-    
+
     --accent-50: #e8fdf6;
     --accent-100: #d0fbed;
     --accent-200: #a1f7da;
@@ -64,7 +63,6 @@
     --accent-800: #085e41;
     --accent-900: #042f21;
     --accent-950: #021710;
-    
   }
   .dark {
     --text-50: #040316;
@@ -78,7 +76,7 @@
     --text-800: #a9a5f3;
     --text-900: #d4d2f9;
     --text-950: #eae9fc;
-    
+
     --background-50: #0d0d0d;
     --background-100: #1a1a1a;
     --background-200: #333333;
@@ -90,7 +88,7 @@
     --background-800: #cccccc;
     --background-900: #e6e6e6;
     --background-950: #f2f2f2;
-    
+
     --primary-50: #050915;
     --primary-100: #09122a;
     --primary-200: #122454;
@@ -102,7 +100,7 @@
     --primary-800: #abbded;
     --primary-900: #d5def6;
     --primary-950: #eaeefa;
-    
+
     --secondary-50: #01001a;
     --secondary-100: #030033;
     --secondary-200: #050066;
@@ -114,7 +112,7 @@
     --secondary-800: #9e99ff;
     --secondary-900: #cfccff;
     --secondary-950: #e7e5ff;
-    
+
     --accent-50: #021710;
     --accent-100: #042f21;
     --accent-200: #085e41;
@@ -126,6 +124,5 @@
     --accent-800: #a1f7da;
     --accent-900: #d0fbed;
     --accent-950: #e8fdf6;
-    
   }
-},
+}
