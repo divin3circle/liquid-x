@@ -83,6 +83,9 @@ const config: Config = {
           950: "var(--accent-950)",
         },
       },
+      animation: {
+        move: "move 5s linear infinite",
+      },
       keyframes: {
         shimmer: {
           from: {
@@ -91,6 +94,10 @@ const config: Config = {
           to: {
             backgroundPosition: "-200% 0",
           },
+        },
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
         },
       },
     },
@@ -103,6 +110,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
+
   addBase({
     ":root": newVars,
   });
