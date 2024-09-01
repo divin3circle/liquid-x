@@ -17,15 +17,14 @@ contract Parameters {
         0x2a9C5afB0d0e4BAb2BCdaE109EC4b0c4Be15a165;
 
     // Chain Selector Numbers
-    uint256 public constant CHAIN_SELECTOR_AVALANCHE_FUJI =
-        14767482510784806043;
-    uint256 public constant CHAIN_SELECTOR_OPTIMISM_SEPOLIA =
+    uint64 public constant CHAIN_SELECTOR_AVALANCHE_FUJI = 14767482510784806043;
+    uint64 public constant CHAIN_SELECTOR_OPTIMISM_SEPOLIA =
         5224473277236331295;
-    uint256 public constant CHAIN_SELECTOR_POLYGON_AMOY = 16281711391670634445;
-    uint256 public constant CHAIN_SELECTOR_ETHEREUM_SEPOLIA =
+    uint64 public constant CHAIN_SELECTOR_POLYGON_AMOY = 16281711391670634445;
+    uint64 public constant CHAIN_SELECTOR_ETHEREUM_SEPOLIA =
         16015286601757825753;
-    uint256 public constant CHAIN_SELECTOR_BASE_SEPOLIA = 10344971235874465080;
-    uint256 public constant CHAIN_SELECTOR_ARBITRUM_SEPOLIA =
+    uint64 public constant CHAIN_SELECTOR_BASE_SEPOLIA = 10344971235874465080;
+    uint64 public constant CHAIN_SELECTOR_ARBITRUM_SEPOLIA =
         3478487238524512106;
 
     // Chain IDs for different networks
@@ -132,4 +131,20 @@ contract Parameters {
         0x65Ae0010421814B1303778Bc82a599f63028d899;
     address public constant ETHEREUM_SEPOLIA_USDT =
         0xB3718E52781F9Fc1C0b72A2966C2616E6d962a1C;
+
+    // Depositor addresses for different networks
+    address public constant AVALANCHE_FUJI_DEPOSITOR = 0x0;
+    address public constant ETHEREUM_SEPOLIA_DEPOSITOR = 0x0;
+    address public constant ARBITRUM_SEPOLIA_DEPOSITOR = 0x0;
+    address public constant POLYGON_AMOY_DEPOSITOR = 0x0;
+    address public constant BASE_SEPOLIA_DEPOSITOR = 0x0;
+    address public constant OPTIMISM_SEPOLIA_DEPOSITOR = 0x0;
+
+    // Minter addresses for different networks
+    address public constant AVALANCHE_FUJI_MINTER = 0x0;
+    address public constant ETHEREUM_SEPOLIA_MINTER = 0x0;
+    address public constant ARBITRUM_SEPOLIA_MINTER = 0x0;
+    address public constant POLYGON_AMOY_MINTER = 0x0;
+    address public constant BASE_SEPOLIA_MINTER = 0x0;
+    address public constant OPTIMISM_SEPOLIA_MINTER = 0x0;
 }
