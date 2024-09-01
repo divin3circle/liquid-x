@@ -147,4 +147,22 @@ contract Parameters {
     address public constant POLYGON_AMOY_MINTER = 0x0;
     address public constant BASE_SEPOLIA_MINTER = 0x0;
     address public constant OPTIMISM_SEPOLIA_MINTER = 0x0;
+
+    //Optimism PriceFeedAddress
+    address public constant BTC_PRICE_FEED =
+        0x3015aa11f5c2D4Bd0f891E708C8927961b38cE7D;
+    address public constant ETH_PRICE_FEED =
+        0x61Ec26aA57019C486B10502285c5A3D4A4750AD7;
+    address public constant LINK_PRICE_FEED =
+        0x53f91dA33120F44893CB896b12a83551DEDb31c6;
+    address public constant AVAX_PRICE_FEED =
+        0xcacB7778Cba5C5526E6EBbA0A1aE74B4c310084B;
+    address public constant UNI_PRICE_FEED =
+        0x7FcCDFD85f11BaFa09702DB78DcDE33feFb6a7AB;
+    address public constant USDC_PRICE_FEED =
+        0x6e44e50E3cc14DD16e01C590DC1d7020cb36eD4C;
+    address public constant USDT_PRICE_FEED =
+        0xF83696ca1b8a266163bE252bE2B94702D4929392;
+    address public constant OP_PRICE_FEED =
+        0x8907a105E562C9F3d7F2ed46539Ae36D87a15590;
 }
