@@ -260,7 +260,7 @@ contract TokenConfig is Script, Parameters {
         token.avax = BaseToken(
             CHAIN_SELECTOR_OPTIMISM_SEPOLIA,
             OPTIMISM_SEPOLIA_AVAX,
-            AVAX_PRICE_FEED
+            OP_PRICE_FEED
         );
         token.uni = BaseToken(
             CHAIN_SELECTOR_OPTIMISM_SEPOLIA,
