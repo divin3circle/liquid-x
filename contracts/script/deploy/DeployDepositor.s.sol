@@ -3,12 +3,12 @@ pragma solidity ^0.8.0;
 
 import {Script} from "forge-std/Script.sol";
 import {Parameters} from "../Parameters.sol";
+import {ChainConfig} from "../config/ChainConfig.s.sol";
 import {Depositor} from "../../src/Depositor.sol";
 
 contract DeployDepositor is Script {
     function run() external returns (Depositor depositor) {
         // Retrieve chain configuration
-
         ChainConfig.ChainComponent memory chainConfig = Parameters
             .getChainConfig();
 
