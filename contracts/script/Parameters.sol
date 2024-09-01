@@ -133,25 +133,38 @@ contract Parameters {
         0xB3718E52781F9Fc1C0b72A2966C2616E6d962a1C;
 
     // Depositor addresses for different networks
-    address public constant AVALANCHE_FUJI_DEPOSITOR = 0x0;
-    address public constant ETHEREUM_SEPOLIA_DEPOSITOR = 0x0;
-    address public constant ARBITRUM_SEPOLIA_DEPOSITOR = 0x0;
-    address public constant POLYGON_AMOY_DEPOSITOR = 0x0;
-    address public constant BASE_SEPOLIA_DEPOSITOR = 0x0;
-    address public constant OPTIMISM_SEPOLIA_DEPOSITOR = 0x0;
+    address public constant AVALANCHE_FUJI_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant ETHEREUM_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant ARBITRUM_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant POLYGON_AMOY_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant BASE_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant OPTIMISM_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
 
     // Minter addresses for different networks
     // @Dancan254: These will be replaced with actual addresses
-    address public constant AVALANCHE_FUJI_MINTER = 0x0;
-    address public constant ETHEREUM_SEPOLIA_MINTER = 0x0;
-    address public constant ARBITRUM_SEPOLIA_MINTER = 0x0;
-    address public constant POLYGON_AMOY_MINTER = 0x0;
-    address public constant BASE_SEPOLIA_MINTER = 0x0;
-    address public constant OPTIMISM_SEPOLIA_MINTER = 0x0;
+    address public constant AVALANCHE_FUJI_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant ETHEREUM_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant ARBITRUM_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant POLYGON_AMOY_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant BASE_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant OPTIMISM_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
 
     //Optimism_MainRouter
     //Needs to be updated with the actual addressS
-    address public constant OPTIMISM_SEPOLIA_MAIN_ROUTER = 0x86d;
+    address public constant OPTIMISM_SEPOLIA_MAIN_ROUTER =
+        0x1111111111111111111111111111111111111111;
 
     //Optimism PriceFeedAddress
     address public constant BTC_PRICE_FEED =
