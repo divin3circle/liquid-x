@@ -141,12 +141,17 @@ contract Parameters {
     address public constant OPTIMISM_SEPOLIA_DEPOSITOR = 0x0;
 
     // Minter addresses for different networks
+    // @Dancan254: These will be replaced with actual addresses
     address public constant AVALANCHE_FUJI_MINTER = 0x0;
     address public constant ETHEREUM_SEPOLIA_MINTER = 0x0;
     address public constant ARBITRUM_SEPOLIA_MINTER = 0x0;
     address public constant POLYGON_AMOY_MINTER = 0x0;
     address public constant BASE_SEPOLIA_MINTER = 0x0;
     address public constant OPTIMISM_SEPOLIA_MINTER = 0x0;
+
+    //Optimism_MainRouter
+    //Needs to be updated with the actual addressS
+    address public constant OPTIMISM_SEPOLIA_MAIN_ROUTER = 0x86d;
 
     //Optimism PriceFeedAddress
     address public constant BTC_PRICE_FEED =
