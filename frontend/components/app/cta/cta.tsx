@@ -24,9 +24,9 @@ export function CTA() {
     },
   ];
   return (
-    <div className="bg-gradient-to-b from-neutral-100 to-white w-full">
+    <div className="bg-gradient-to-b from-neutral-100 to-white w-full dark:to-neutral-950 dark:from-neutral-800">
       <div className="flex flex-col items-center justify-center h-[40rem] ">
-        <p className="text-neutral-600 text-sm px-2 sm:text-base">
+        <p className="text-neutral-600 text-sm px-2 sm:text-base dark:text-text-100">
           Experience unified liquidity management across multiple blockchains
           effortlessly
         </p>

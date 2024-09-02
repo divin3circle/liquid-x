@@ -16,7 +16,7 @@ export function WorkLine() {
       content: (
         <div>
           <p
-            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
+            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className} dark:text-gray-100`}
           >
             Effortlessly connect your digital wallets across multiple
             blockchains. Once connected, explore available liquidity pools and
@@ -61,7 +61,7 @@ export function WorkLine() {
       content: (
         <div>
           <p
-            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
+            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className} dark:text-gray-100`}
           >
             LiquidX streamlines the process of moving assets between different
             blockchains for lending and borrowing purposes. Deposit collateral
@@ -106,7 +106,7 @@ export function WorkLine() {
       content: (
         <div>
           <p
-            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
+            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className} dark:text-gray-100`}
           >
             Enjoy LiquidX{"'"}s sophisticated credit scoring mechanism that
             evaluates on-chain activities, wallet balances, transaction history,
@@ -150,7 +150,7 @@ export function WorkLine() {
     },
   ];
   return (
-    <div className="w-full bg-gradient-to-b from-white to-neutral-100 ">
+    <div className="w-full bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800">
       <Timeline data={data} />
     </div>
   );
