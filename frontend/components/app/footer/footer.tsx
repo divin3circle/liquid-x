@@ -2,13 +2,23 @@ import React from "react";
 import polygon from "../../../public/polygon.svg";
 import icp from "../../../public/icp.svg";
 import eth from "../../../public/eth.svg";
+import base from "../../../public/base.svg";
 import avalanche from "../../../public/avalanche.svg";
 import optimism from "../../../public/optimism.svg";
 import Image from "next/image";
+import { Titillium_Web } from "next/font/google";
+
+const titillium = Titillium_Web({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+});
 
 function Footer() {
   return (
-    <div className="bg-gradient-to-b from-neutral-100 to-white w-full dark:to-neutral-950 dark:from-neutral-800">
+    <div
+      className={`bg-gradient-to-b from-neutral-100 to-white w-full dark:to-neutral-950 dark:from-neutral-800 ${titillium.className}`}
+    >
       <footer className="">
         <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="text-center">
@@ -116,6 +126,16 @@ function Footer() {
                   className="text-gray-700 transition hover:opacity-75"
                 >
                   <Image src={icp} alt="Polygon" width={25} height={25} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.base.org/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <Image src={base} alt="Polygon" width={25} height={25} />
                 </a>
               </li>
             </ul>
