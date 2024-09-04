@@ -5,6 +5,7 @@ pragma solidity ^0.8.0;
 import {Script} from "../../lib/forge-std/src/Script.sol";
 import {Parameters} from "../Parameters.sol";
 import {MainRouter} from "../../src/MainRouter.sol";
+import {TokenConfig} from "../config/TokensConfig.s.sol";
 
 contract DeployMainRouter is Script, Parameters {
     function run() external returns (MainRouter) {
@@ -15,7 +16,61 @@ contract DeployMainRouter is Script, Parameters {
             OPTIMISM_FUNCTIONS_ROUTER,
             OPTIMISM_SEPOLIA_DON_ID
         );
+
+        mainRouter.setSubscriptionID(OPTIMISM_SEPOLIA_SUBSCRIPTION_ID);
+        TokenConfig tokensConfig = new TokenConfig();
+
+        addAllowedToken(mainRouter, tokensConfig.getAvalancheFujiToken());
+
         vm.stopBroadcast();
         return mainRouter;
+    }
+
+    function addAllowedToken(
+        MainRouter mainRouter,
+        TokenConfig.Token memory token
+    ) public {
+        mainRouter.addAllowedToken(
+            token.wbtc.chainSelector,
+            token.wbtc.token,
+            token.wbtc.priceFeed,
+            18
+        );
+        mainRouter.addAllowedToken(
+            token.weth.chainSelector,
+            token.weth.token,
+            token.weth.priceFeed,
+            18
+        );
+        mainRouter.addAllowedToken(
+            token.link.chainSelector,
+            token.link.token,
+            token.link.priceFeed,
+            18
+        );
+        mainRouter.addAllowedToken(
+            token.avax.chainSelector,
+            token.avax.token,
+            token.avax.priceFeed,
+            18
+        );
+        mainRouter.addAllowedToken(
+            token.uni.chainSelector,
+            token.uni.token,
+            token.uni.priceFeed,
+            18
+        );
+        mainRouter.addAllowedToken(
+            token.usdc.chainSelector,
+            token.usdc.token,
+            token.usdc.priceFeed,
+            6
+        );
+        mainRouter.addAllowedToken(
+            token.usdt.chainSelector,
+            token.usdt.token,
+            token.usdt.priceFeed,
+            6
+        );
     }
 }
