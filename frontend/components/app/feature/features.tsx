@@ -68,8 +68,8 @@ export function FeaturesSection() {
     },
   ];
   return (
-    <div className="bg-gradient-to-b from-neutral-100 to-white w-full">
-      <h1 className="md:text-3xl text-2xl font-extrabold text-center md:my-8 my-2 font-sans">
+    <div className="bg-gradient-to-b from-neutral-100 to-white w-full dark:to-neutral-950 dark:from-neutral-800">
+      <h1 className="md:text-3xl text-2xl font-extrabold text-center md:my-8 my-2 font-sans dark:text-text-100">
         Your DeFi Pain Points, Our Powerful Solutions.
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">

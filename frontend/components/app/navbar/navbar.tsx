@@ -5,7 +5,7 @@ import logo from "../../../public/logo.png";
 
 function Navbar() {
   return (
-    <div className="flex justify-between items-center w-full lg:w-[75%] md:w-[90%] mt-8 px-4">
+    <div className="flex justify-between items-center w-full lg:w-[75%] md:w-[90%] mt-8 px-4 dark:bg-black dark:text-white">
       <div className="flex items-center gap-2">
         <Image src={logo} width={40} height={40} alt="Logo" className="" />
         <h1 className="font-bold text-xl">liquidX</h1>

@@ -16,12 +16,12 @@ export function WorkLine() {
       content: (
         <div>
           <p
-            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
+            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className} dark:text-gray-100`}
           >
-            With an intuitive interface users can effortlessly connect their
-            digital wallets across multiple blockchains. Once connected, explore
-            available liquidity pools and cross-chain opportunities, accessing a
-            consolidated view of their digital assets.
+            Effortlessly connect your digital wallets across multiple
+            blockchains. Once connected, explore available liquidity pools and
+            cross-chain opportunities, accessing a consolidated view of their
+            digital assets.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -61,12 +61,12 @@ export function WorkLine() {
       content: (
         <div>
           <p
-            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
+            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className} dark:text-gray-100`}
           >
             LiquidX streamlines the process of moving assets between different
-            blockchains for lending and borrowing purposes. Users can deposit
-            collateral on one chain and borrow on another without the need for
-            costly bridging fees, slippage, or time-consuming processes.
+            blockchains for lending and borrowing purposes. Deposit collateral
+            on one chain and borrow on another without the need for costly
+            bridging fees, slippage, or time-consuming processes.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -106,7 +106,7 @@ export function WorkLine() {
       content: (
         <div>
           <p
-            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className}`}
+            className={`text-neutral-800 md:text-sm text-base font-normal mb-8 leading-relaxed md:w-3/4 ${titillium.className} dark:text-gray-100`}
           >
             Enjoy LiquidX{"'"}s sophisticated credit scoring mechanism that
             evaluates on-chain activities, wallet balances, transaction history,
@@ -150,7 +150,7 @@ export function WorkLine() {
     },
   ];
   return (
-    <div className="w-full bg-gradient-to-b from-white to-neutral-100 ">
+    <div className="w-full bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800">
       <Timeline data={data} />
     </div>
   );

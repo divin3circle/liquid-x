@@ -7,7 +7,7 @@ import Image from "next/image";
 import polygon from "../../../public/polygon.svg";
 import optimism from "../../../public/optimism.svg";
 import eth from "../../../public/eth.svg";
-import bnb from "../../../public/bnb.svg";
+import bnb from "../../../public/base.svg";
 import avalanche from "../../../public/avalanche.svg";
 
 export function CommunityBNB() {
@@ -18,9 +18,10 @@ export function CommunityBNB() {
       </CardSkeletonContainer>
       <CardTitle>BNB</CardTitle>
       <CardDescription>
-        BNB Chain is a high-performance blockchain network developed by Binance
-        that supports the creation and functionality of decentralized
-        applications (dApps).
+        Base Chain is an Ethereum Layer-2 blockchain network developed by
+        Coinbase. It is designed to improve scalability, performance, and
+        interoperability while reducing transaction costs and settlement time on
+        the Ethereum network.
       </CardDescription>
     </Card>
   );
