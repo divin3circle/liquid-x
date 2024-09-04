@@ -21,6 +21,43 @@ contract DeployMainRouter is Script, Parameters {
         TokenConfig tokensConfig = new TokenConfig();
 
         addAllowedToken(mainRouter, tokensConfig.getAvalancheFujiToken());
+        addAllowedToken(mainRouter, tokensConfig.getEthereumSepoliaToken());
+        addAllowedToken(mainRouter, tokensConfig.getPolygonAmoyToken());
+        addAllowedToken(mainRouter, tokensConfig.getBaseSepoliaToken());
+        addAllowedToken(mainRouter, tokensConfig.getOptimismSepoliaToken());
+        addAllowedToken(mainRouter, tokensConfig.getArbitrumSepoliaToken());
+
+        mainRouter.setAllowedDestinationChain(
+            CHAIN_SELECTOR_AVALANCHE_FUJI,
+            true
+        );
+        mainRouter.setAllowedDestinationChain(
+            CHAIN_SELECTOR_ETHEREUM_SEPOLIA,
+            true
+        );
+        mainRouter.setAllowedDestinationChain(
+            CHAIN_SELECTOR_POLYGON_AMOY,
+            true
+        );
+        mainRouter.setAllowedDestinationChain(
+            CHAIN_SELECTOR_BASE_SEPOLIA,
+            true
+        );
+        mainRouter.setAllowedDestinationChain(
+            CHAIN_SELECTOR_OPTIMISM_SEPOLIA,
+            true
+        );
+        mainRouter.setAllowedDestinationChain(
+            CHAIN_SELECTOR_ARBITRUM_SEPOLIA,
+            true
+        );
+
+        mainRouter.setAllowedSourceChain(CHAIN_SELECTOR_AVALANCHE_FUJI, true);
+        mainRouter.setAllowedSourceChain(CHAIN_SELECTOR_ETHEREUM_SEPOLIA, true);
+        mainRouter.setAllowedSourceChain(CHAIN_SELECTOR_POLYGON_AMOY, true);
+        mainRouter.setAllowedSourceChain(CHAIN_SELECTOR_BASE_SEPOLIA, true);
+        mainRouter.setAllowedSourceChain(CHAIN_SELECTOR_OPTIMISM_SEPOLIA, true);
+        mainRouter.setAllowedSourceChain(CHAIN_SELECTOR_ARBITRUM_SEPOLIA, true);
 
         vm.stopBroadcast();
         return mainRouter;
