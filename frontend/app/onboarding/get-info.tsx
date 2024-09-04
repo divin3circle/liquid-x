@@ -80,7 +80,8 @@ function GetUserInformation() {
                     <Input
                       placeholder="What should we call you?"
                       {...field}
-                      className="dark:text-primary-50 text-gray-500"
+                      className="dark:text-primary-50 text-gray-500 lowercase
+                      "
                     />
                   </FormControl>
                   <FormMessage />
