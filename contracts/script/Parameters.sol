@@ -183,4 +183,11 @@ contract Parameters {
         0xF83696ca1b8a266163bE252bE2B94702D4929392;
     address public constant OP_PRICE_FEED =
         0x8907a105E562C9F3d7F2ed46539Ae36D87a15590;
+
+    //Optimism Functions Router
+    address public constant OPTIMISM_FUNCTIONS_ROUTER =
+        0xC17094E3A1348E5C7544D4fF8A36c28f2C6AAE28;
+    bytes32 public constant OPTIMISM_SEPOLIA_DON_ID =
+        0x66756e2d6f7074696d69736d2d7365706f6c69612d3100000000000000000000;
+    uint64 public constant OPTIMISM_SUBSCRIPTION_ID = 80340;
 }
