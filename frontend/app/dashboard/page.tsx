@@ -1,6 +1,7 @@
 "use client";
 
 import DashboardGraph from "@/components/app/dashboard/graph";
+import TrendingPools from "@/components/app/dashboard/pools";
 import DashboardNavbar from "@/components/app/navbar/ui-navbar";
 import React from "react";
 
@@ -10,6 +11,7 @@ function Dashboard() {
       <DashboardNavbar />
       <div className="h-full">
         <DashboardGraph />
+        <TrendingPools />
       </div>
     </div>
   );
