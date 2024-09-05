@@ -30,7 +30,7 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: "Total Value Locked",
-    color: "hsl(var(--chart-1))",
+    color: "#2e59d1",
   },
 } satisfies ChartConfig;
 
@@ -96,7 +96,7 @@ export function Component() {
   return (
     <Card className="shadow-none border-0 ">
       <CardHeader>
-        <CardTitle>{chain}</CardTitle>
+        <CardTitle className="text-primary-500">{chain}</CardTitle>
         <CardDescription>
           TVL in DeFi on {chain} over the last 7 months.
         </CardDescription>
