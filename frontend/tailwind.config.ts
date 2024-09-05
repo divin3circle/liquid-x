@@ -171,7 +171,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("daisyui")],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

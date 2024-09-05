@@ -1,11 +1,16 @@
+"use client";
+
+import DashboardGraph from "@/components/app/dashboard/graph";
 import DashboardNavbar from "@/components/app/navbar/ui-navbar";
 import React from "react";
 
 function Dashboard() {
   return (
-    <div className="w-full">
+    <div className="w-full h-screen">
       <DashboardNavbar />
-      <div>Dashboard</div>
+      <div>
+        <DashboardGraph />
+      </div>
     </div>
   );
 }
