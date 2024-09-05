@@ -30,7 +30,7 @@ function DashboardNavbar() {
           placeholder="Search pools"
           className="ml-2 lg:w-[300px] md:w-[200px]"
         />
-        <Button className="mx-4 -ml-1 flex bg-primary-500">
+        <Button className="mx-4 -ml-1 flex bg-primary-500 hover:bg-transparent hover:text-primary">
           <IoMdSearch size={22} />
         </Button>
       </div>

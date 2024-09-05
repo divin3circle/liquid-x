@@ -1,7 +1,13 @@
+import DashboardNavbar from "@/components/app/navbar/ui-navbar";
 import React from "react";
 
-function Dashboard() {
-  return <div>Deposit & Borrow</div>;
+function Deposit() {
+  return (
+    <div className="w-full">
+      <DashboardNavbar />
+      <div>Deposit</div>
+    </div>
+  );
 }
 
-export default Dashboard;
+export default Deposit;

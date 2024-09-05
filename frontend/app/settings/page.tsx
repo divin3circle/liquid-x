@@ -1,7 +1,13 @@
+import DashboardNavbar from "@/components/app/navbar/ui-navbar";
 import React from "react";
 
-function Dashboard() {
-  return <div>Settings</div>;
+function Settings() {
+  return (
+    <div className="w-full">
+      <DashboardNavbar />
+      <div>Settings</div>
+    </div>
+  );
 }
 
-export default Dashboard;
+export default Settings;

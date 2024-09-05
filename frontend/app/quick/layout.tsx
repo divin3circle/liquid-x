@@ -24,10 +24,11 @@ export default function DashboardLayout({
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
+
       <body className={titillium.className}>
         <main className="flex">
           <Sidebar />
-          <div>{children}</div>
+          {children}
         </main>
       </body>
     </html>
