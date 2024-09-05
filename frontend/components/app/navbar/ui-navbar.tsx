@@ -34,7 +34,7 @@ function DashboardNavbar() {
           <IoMdSearch size={22} />
         </Button>
       </div>
-      <div className="md:flex items-center justify-between hidden lg:w-[35%] md:w-1/2">
+      <div className="md:flex items-center justify-between hidden lg:w-[30%] md:w-1/2">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>
