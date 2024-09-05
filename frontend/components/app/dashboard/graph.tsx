@@ -100,7 +100,7 @@ function DashboardGraph() {
   }
 
   return (
-    <Card className="md:mx-2">
+    <Card className="mx-2">
       <CardHeader>
         <CardTitle className="md:w-[30%]">
           <Select>

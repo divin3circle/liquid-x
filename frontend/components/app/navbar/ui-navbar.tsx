@@ -24,17 +24,17 @@ import DrawerSideBar from "../sidebar/drawer-sidebar";
 
 function DashboardNavbar() {
   return (
-    <div className="flex items-center justify-between w-full my-4">
+    <div className="flex items-center justify-between md:w-full my-4">
       <div className="flex gap-2">
         <Input
           placeholder="Search pools"
-          className="ml-2 lg:w-[300px] md:w-[200px]"
+          className="ml-2 lg:w-[300px] md:w-[150px]"
         />
         <Button className="mx-4 -ml-1 flex bg-primary-500 hover:bg-transparent hover:text-primary">
           <IoMdSearch size={22} />
         </Button>
       </div>
-      <div className="md:flex items-center justify-between hidden lg:w-[30%] md:w-1/2">
+      <div className="md:flex items-center justify-between hidden md:w-1/2">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>

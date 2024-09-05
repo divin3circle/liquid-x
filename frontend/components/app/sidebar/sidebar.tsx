@@ -11,7 +11,7 @@ import { IoLogOut } from "react-icons/io5";
 
 function Sidebar() {
   return (
-    <aside className="hidden md:flex flex-col justify-between w-[35%] lg:w-[20%] mt-2 bg-[##FAF9F6] shadow-md h-screen pl-2">
+    <aside className="hidden md:flex flex-col justify-between md:w-[25%] lg:w-[20%] mt-0 bg-[#ffeeee] shadow-md h-screen pl-2">
       <div className="flex gap-2 items-center mx-4 my-4">
         <Image src={logo} alt="LiquidX" className="" width={50} height={50} />
         <h1 className="font-bold ">liquidX</h1>

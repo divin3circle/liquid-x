@@ -24,9 +24,11 @@ export default function DashboardLayout({
         <link rel="icon" href="/favicon.png" />
       </head>
       <body className={titillium.className}>
-        <main className="flex">
+        <main className="flex md:w-full">
           <Sidebar />
-          {children}
+          <div className="md:w-[75%] lg:w-[80%] overflow-hidden">
+            {children}
+          </div>
         </main>
       </body>
     </html>

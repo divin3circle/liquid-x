@@ -6,9 +6,9 @@ import React from "react";
 
 function Dashboard() {
   return (
-    <div className="w-full h-screen">
+    <div className="h-screen w-full bg-[#ffff]">
       <DashboardNavbar />
-      <div>
+      <div className="h-full">
         <DashboardGraph />
       </div>
     </div>
