@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 import { format } from "date-fns";
 import * as React from "react";
 import { TrendingUp } from "lucide-react";
@@ -7,27 +7,32 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "@/components/ui/card";
-import eth from "../../../public/eth.svg";
-import bsc from "../../../public/base.svg";
-import pol from "../../../public/polygon.svg";
-import Image from "next/image";
 import {
   ChartConfig,
   ChartContainer,
-  // ChartTooltip,
+  ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
+const chartData = [
+  { month: "January", desktop: 186 },
+  { month: "February", desktop: 305 },
+  { month: "March", desktop: 237 },
+  { month: "April", desktop: 73 },
+  { month: "May", desktop: 209 },
+  { month: "June", desktop: 214 },
+];
+
+const chartConfig = {
+  desktop: {
+    label: "Total Value Locked",
+    color: "hsl(var(--chart-1))",
+  },
+} satisfies ChartConfig;
 
 type TSupportedChains = "Ethereum" | "Polygon" | "Base";
 type TGraphData = {
@@ -40,18 +45,10 @@ type TGraphDataFormatted = {
   tvl: number;
 };
 
-const chartConfig = {
-  desktop: {
-    label: "Total Value Locked",
-    color: "var(--primary-500)",
-  },
-} satisfies ChartConfig;
-
-function DashboardGraph() {
+export function Component() {
   const [chain, setChain] = React.useState<TSupportedChains>("Ethereum");
   const [data, setData] = React.useState<TGraphDataFormatted[]>([]);
   const [loading, setLoading] = React.useState<boolean>(false);
-  const description = `The total value locked (TVL) in DeFi on ${chain} over the last 7 months.`;
 
   React.useEffect(() => {
     const fetchTvl = async () => {
@@ -97,41 +94,12 @@ function DashboardGraph() {
   }
 
   return (
-    <Card className="mx-2">
+    <Card className="shadow-none border-0 ">
       <CardHeader>
-        <CardTitle className="md:w-[30%]">
-          <Select>
-            <SelectTrigger className="text-gray-500">
-              <SelectValue>
-                <div className="flex items-center gap-2">
-                  <Image src={eth} alt="ethereum" width={10} height={10} />
-                  <h1>Ethereum</h1>
-                </div>
-              </SelectValue>
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="ethereum" className="">
-                <div className="flex items-center gap-2">
-                  <Image src={eth} alt="ethereum" width={10} height={10} />
-                  <h1>Ethereum</h1>
-                </div>
-              </SelectItem>
-              <SelectItem value="bsc">
-                <div className="flex items-center gap-2">
-                  <Image src={bsc} alt="base" width={10} height={10} />
-                  <h1>Base</h1>
-                </div>
-              </SelectItem>
-              <SelectItem value="polygon">
-                <div className="flex items-center gap-2">
-                  <Image src={pol} alt="polygon" width={10} height={10} />
-                  <h1>Polygon</h1>
-                </div>
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardTitle>{chain}</CardTitle>
+        <CardDescription>
+          TVL in DeFi on {chain} over the last 7 months.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="h-96 w-full">
@@ -151,16 +119,17 @@ function DashboardGraph() {
               tickMargin={8}
               tickFormatter={(value) => value.slice(0, 10)}
             />
-            {/* <ChartTooltip
+            <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent indicator="line" />}
-            /> */}
+            />
             <Area
               dataKey="tvl"
               type="natural"
               fill="var(--color-desktop)"
               fillOpacity={0.4}
               stroke="var(--color-desktop)"
+              className="h-96"
             />
           </AreaChart>
         </ChartContainer>
@@ -177,5 +146,3 @@ function DashboardGraph() {
     </Card>
   );
 }
-
-export default DashboardGraph;

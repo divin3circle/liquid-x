@@ -73,7 +73,7 @@ function GetUserInformation() {
             render={({ field }) => {
               return (
                 <FormItem className="mx-2">
-                  <FormLabel className="font-bold text-base dark:text-primary-50 text-gray-500 flex items-start">
+                  <FormLabel className="kanit-bold text-base dark:text-primary-50 text-gray-500 flex items-start">
                     Username
                   </FormLabel>
                   <FormControl>
@@ -95,7 +95,7 @@ function GetUserInformation() {
             render={({ field }) => {
               return (
                 <FormItem className="mx-2">
-                  <FormLabel className="font-bold text-base dark:text-primary-50 text-gray-500 flex items-start">
+                  <FormLabel className="kanit-bold text-base dark:text-primary-50 text-gray-500 flex items-start">
                     Network
                   </FormLabel>
                   <Select onValueChange={field.onChange}>

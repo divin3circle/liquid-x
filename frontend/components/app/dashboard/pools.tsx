@@ -1,73 +1,75 @@
-import { useQuery } from "@apollo/client";
-import client from "../../../lib/apolloClient";
-import { GET_TRENDING_POOLS } from "../../../lib/queries";
-import {
-  Key,
-  ReactElement,
-  JSXElementConstructor,
-  ReactNode,
-  ReactPortal,
-  AwaitedReactNode,
-} from "react";
+// app/page.tsx (Server Component)
 
-function TrendingPools() {
-  const { loading, error, data } = useQuery(GET_TRENDING_POOLS, {
-    client: client,
-  });
+import { createClient, gql } from "urql";
+import { cacheExchange, fetchExchange } from "@urql/core";
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+type Pool = {
+  id: string;
+  token0: {
+    symbol: string;
+    name: string;
+  };
+  token1: {
+    symbol: string;
+    name: string;
+  };
+  volumeUSD: string;
+  totalValueLockedUSD: string;
+  liquidity: string;
+  feeTier: string;
+};
+
+type PoolsData = {
+  pools: Pool[];
+};
+
+const ExampleComponent = ({ data }: { data: PoolsData | undefined }) => {
+  if (!data) {
+    return <p>Loading...</p>;
+  }
+
+  return <pre>{JSON.stringify(data, null, 2)}</pre>;
+};
+
+const client = createClient({
+  url: "https://gateway.thegraph.com/api/{api-key}/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV",
+  exchanges: [cacheExchange, fetchExchange],
+});
+
+const DATA_QUERY = gql`
+  {
+    pools(orderBy: volumeUSD, orderDirection: desc, first: 10) {
+      id
+      token0 {
+        symbol
+        name
+      }
+      token1 {
+        symbol
+        name
+      }
+      volumeUSD
+      totalValueLockedUSD
+      liquidity
+      feeTier
+    }
+  }
+`;
+
+export default async function TrendingPools() {
+  const result = await client.query(DATA_QUERY, {}).toPromise();
+
+  if (result.error) {
+    return (
+      <div>
+        <p>Error: {result.error.message}</p>
+      </div>
+    );
+  }
 
   return (
     <div>
-      <h2>Trending Pools</h2>
-      <ul>
-        {data.pools.map(
-          (pool: {
-            id: Key | null | undefined;
-            token0: {
-              symbol:
-                | string
-                | number
-                | bigint
-                | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | Iterable<ReactNode>
-                | ReactPortal
-                | Promise<AwaitedReactNode>
-                | null
-                | undefined;
-            };
-            token1: {
-              symbol:
-                | string
-                | number
-                | bigint
-                | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | Iterable<ReactNode>
-                | ReactPortal
-                | Promise<AwaitedReactNode>
-                | null
-                | undefined;
-            };
-            volumeUSD: string;
-            totalValueLockedUSD: string;
-          }) => (
-            <li key={pool.id}>
-              <strong>
-                {pool.token0.symbol}/{pool.token1.symbol}
-              </strong>
-              <br />
-              Volume: ${parseFloat(pool.volumeUSD).toFixed(2)}
-              <br />
-              Liquidity: ${parseFloat(pool.totalValueLockedUSD).toFixed(2)}
-            </li>
-          )
-        )}
-      </ul>
+      <ExampleComponent data={result.data} />
     </div>
   );
 }
-
-export default TrendingPools;
