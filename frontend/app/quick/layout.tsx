@@ -1,3 +1,4 @@
+import DashboardNavbar from "@/components/app/navbar/ui-navbar";
 import Sidebar from "@/components/app/sidebar/sidebar";
 import type { Metadata } from "next";
 import { Titillium_Web } from "next/font/google";
@@ -26,7 +27,7 @@ export default function DashboardLayout({
       <body className={titillium.className}>
         <main className="flex">
           <Sidebar />
-          {children}
+          <div>{children}</div>
         </main>
       </body>
     </html>

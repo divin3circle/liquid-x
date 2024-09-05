@@ -9,13 +9,9 @@ import Link from "next/link";
 import { RiMessage3Fill } from "react-icons/ri";
 import { IoLogOut } from "react-icons/io5";
 
-function Sidebar() {
+function DrawerSideBar() {
   return (
-    <aside className="hidden md:flex flex-col justify-between w-[35%] lg:w-[20%] mt-2 bg-[##FAF9F6] shadow-md h-screen pl-2">
-      <div className="flex gap-2 items-center mx-4 my-4">
-        <Image src={logo} alt="LiquidX" className="" width={50} height={50} />
-        <h1 className="font-bold ">liquidX</h1>
-      </div>
+    <div>
       <div>
         <nav className="flex flex-col gap-2">
           <Link href="/dashboard" className="p-4 flex gap-2 items-center my-2">
@@ -56,8 +52,8 @@ function Sidebar() {
           </Link>
         </nav>
       </div>
-    </aside>
+    </div>
   );
 }
 
-export default Sidebar;
+export default DrawerSideBar;
