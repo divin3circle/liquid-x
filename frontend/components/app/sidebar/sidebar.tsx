@@ -24,7 +24,7 @@ function Sidebar() {
           </Link>
           <Link href="/deposit" className="p-4 flex gap-2 items-center my-2">
             <SiDepositphotos />
-            Deposit & Borrow
+            Deposit
           </Link>
           <Link href="/swap" className="p-4 flex gap-2 items-center my-2">
             <IoIosSwap />
