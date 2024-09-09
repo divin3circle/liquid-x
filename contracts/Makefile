@@ -10,7 +10,7 @@ update_abi:
 deploy_main_router:
 	@forge script script/deploy/DeployMainRouter.s.sol:DeployMainRouter --rpc-url $(OPTIMISM_SEPOLIA_RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast
 
-# Target for Avalanche Fuji
+# Target for Optimism Sepolia
 deploy_depositor:
 	@forge script script/deploy/DeployDeposit.s.sol:DeployDeposit --rpc-url $(RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast --skip-simulation --gas-limit 10000000
 
