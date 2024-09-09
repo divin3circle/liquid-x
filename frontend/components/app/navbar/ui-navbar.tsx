@@ -28,12 +28,12 @@ function DashboardNavbar() {
   return (
     <div className="flex items-center justify-between md:w-full my-4">
       <div className="flex gap-2 mx-2">
-        <div className="md:hidden flex items-center gap-2">
+        <div className="lg:hidden flex items-center gap-2">
           <Image src={logo} width={40} height={40} alt="Logo" className="" />
           <h1 className="font-bold text-xl">liquidX</h1>
         </div>
       </div>
-      <div className="md:flex gap-2 items-center justify-between hidden">
+      <div className="lg:flex gap-2 items-center justify-between hidden">
         <Input
           placeholder="Search pools"
           className="ml-2 lg:w-[300px] md:w-[150px]"
@@ -42,7 +42,7 @@ function DashboardNavbar() {
           <IoMdSearch size={22} />
         </Button>
       </div>
-      <div className="md:flex items-center justify-between hidden md:w-1/2">
+      <div className="lg:flex items-center justify-between hidden md:w-1/2">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>
@@ -70,7 +70,7 @@ function DashboardNavbar() {
           <Button className="flex bg-primary-500">Connect Wallet</Button>
         </div>
       </div>
-      <div className="flex md:hidden mx-1">
+      <div className="flex lg:hidden mx-1">
         <Drawer>
           <DrawerTrigger>
             <IoMenu className="mx-2" size={42} />
