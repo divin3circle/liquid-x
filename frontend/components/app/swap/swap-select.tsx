@@ -19,7 +19,7 @@ import Image from "next/image";
 export function SelectScrollable() {
   return (
     <Select>
-      <SelectTrigger className="w-[150px] border-[.5px] border-gray-300">
+      <SelectTrigger className="w-[150px] md:w-[200px] lg:w-[250px] border-[.5px] border-gray-300">
         <SelectValue
           placeholder="Chain"
           className="placeholder:text-gray-500"
@@ -51,7 +51,7 @@ export function SelectScrollable() {
               <p>Optimism Sepolia</p>
             </div>
           </SelectItem>
-          <SelectItem value="pst">
+          <SelectItem value="ast">
             <div className="flex items-center gap-2">
               <Image src={avalanche} alt="avalanche" width={16} height={16} />
               <p>Avalanche Fuji</p>
