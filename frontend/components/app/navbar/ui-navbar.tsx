@@ -21,11 +21,19 @@ import {
 } from "@/components/ui/drawer";
 import { IoMenu } from "react-icons/io5";
 import DrawerSideBar from "../sidebar/drawer-sidebar";
+import Image from "next/image";
+import logo from "../../../public/logo.png";
 
 function DashboardNavbar() {
   return (
     <div className="flex items-center justify-between md:w-full my-4">
-      <div className="flex gap-2">
+      <div className="flex gap-2 mx-2">
+        <div className="md:hidden flex items-center gap-2">
+          <Image src={logo} width={40} height={40} alt="Logo" className="" />
+          <h1 className="font-bold text-xl">liquidX</h1>
+        </div>
+      </div>
+      <div className="md:flex gap-2 items-center justify-between hidden">
         <Input
           placeholder="Search pools"
           className="ml-2 lg:w-[300px] md:w-[150px]"
