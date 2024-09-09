@@ -17,15 +17,14 @@ contract Parameters {
         0x2a9C5afB0d0e4BAb2BCdaE109EC4b0c4Be15a165;
 
     // Chain Selector Numbers
-    uint256 public constant CHAIN_SELECTOR_AVALANCHE_FUJI =
-        14767482510784806043;
-    uint256 public constant CHAIN_SELECTOR_OPTIMISM_SEPOLIA =
+    uint64 public constant CHAIN_SELECTOR_AVALANCHE_FUJI = 14767482510784806043;
+    uint64 public constant CHAIN_SELECTOR_OPTIMISM_SEPOLIA =
         5224473277236331295;
-    uint256 public constant CHAIN_SELECTOR_POLYGON_AMOY = 16281711391670634445;
-    uint256 public constant CHAIN_SELECTOR_ETHEREUM_SEPOLIA =
+    uint64 public constant CHAIN_SELECTOR_POLYGON_AMOY = 16281711391670634445;
+    uint64 public constant CHAIN_SELECTOR_ETHEREUM_SEPOLIA =
         16015286601757825753;
-    uint256 public constant CHAIN_SELECTOR_BASE_SEPOLIA = 10344971235874465080;
-    uint256 public constant CHAIN_SELECTOR_ARBITRUM_SEPOLIA =
+    uint64 public constant CHAIN_SELECTOR_BASE_SEPOLIA = 10344971235874465080;
+    uint64 public constant CHAIN_SELECTOR_ARBITRUM_SEPOLIA =
         3478487238524512106;
 
     // Chain IDs for different networks
@@ -132,4 +131,63 @@ contract Parameters {
         0x65Ae0010421814B1303778Bc82a599f63028d899;
     address public constant ETHEREUM_SEPOLIA_USDT =
         0xB3718E52781F9Fc1C0b72A2966C2616E6d962a1C;
+
+    // Depositor addresses for different networks
+    address public constant AVALANCHE_FUJI_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant ETHEREUM_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant ARBITRUM_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant POLYGON_AMOY_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant BASE_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+    address public constant OPTIMISM_SEPOLIA_DEPOSITOR =
+        0x1111111111111111111111111111111111111111;
+
+    // Minter addresses for different networks
+    // @Dancan254: These will be replaced with actual addresses
+    address public constant AVALANCHE_FUJI_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant ETHEREUM_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant ARBITRUM_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant POLYGON_AMOY_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant BASE_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
+    address public constant OPTIMISM_SEPOLIA_MINTER =
+        0x1111111111111111111111111111111111111111;
+
+    //Optimism_MainRouter
+    //Needs to be updated with the actual addressS
+    address public constant OPTIMISM_SEPOLIA_MAIN_ROUTER =
+        0x1111111111111111111111111111111111111111;
+
+    //Optimism PriceFeedAddress
+    address public constant BTC_PRICE_FEED =
+        0x3015aa11f5c2D4Bd0f891E708C8927961b38cE7D;
+    address public constant ETH_PRICE_FEED =
+        0x61Ec26aA57019C486B10502285c5A3D4A4750AD7;
+    address public constant LINK_PRICE_FEED =
+        0x53f91dA33120F44893CB896b12a83551DEDb31c6;
+    address public constant AVAX_PRICE_FEED =
+        0xcacB7778Cba5C5526E6EBbA0A1aE74B4c310084B;
+    address public constant UNI_PRICE_FEED =
+        0x7FcCDFD85f11BaFa09702DB78DcDE33feFb6a7AB;
+    address public constant USDC_PRICE_FEED =
+        0x6e44e50E3cc14DD16e01C590DC1d7020cb36eD4C;
+    address public constant USDT_PRICE_FEED =
+        0xF83696ca1b8a266163bE252bE2B94702D4929392;
+    address public constant OP_PRICE_FEED =
+        0x8907a105E562C9F3d7F2ed46539Ae36D87a15590;
+
+    //Optimism Functions Router
+    address public constant OPTIMISM_FUNCTIONS_ROUTER =
+        0xC17094E3A1348E5C7544D4fF8A36c28f2C6AAE28;
+    bytes32 public constant OPTIMISM_SEPOLIA_DON_ID =
+        0x66756e2d6f7074696d69736d2d7365706f6c69612d3100000000000000000000;
+    uint64 public constant OPTIMISM_SEPOLIA_SUBSCRIPTION_ID = 228;
 }
