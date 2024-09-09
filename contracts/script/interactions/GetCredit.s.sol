@@ -8,7 +8,7 @@ import { MainRouter } from "../../src/MainRouter.sol";
 
 contract GetCredit is Script, Parameters {
     function getCredit(address user, string[] calldata args) external returns(bytes32) {
-        MainRouter mainRouter = MainRouter(payable(AVALANCHE_FUJI_MAIN_ROUTER));
+        MainRouter mainRouter = MainRouter(payable(OPTIMISM_SEPOLIA_MAIN_ROUTER));
 
         vm.startBroadcast();
         bytes32 mid = mainRouter.sendRequestToCalculateActivityCredit(user, args);

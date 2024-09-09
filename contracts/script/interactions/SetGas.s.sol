@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 
 import { Script } from "forge-std/Script.sol";
-import { TokenConfig } from "../config/TokenConfig.s.sol";
+import { TokenConfig } from "../config/TokenConfigs.s.sol";
 import { ERC20Mock } from "../Mocks/ERC20Mock.sol";
 import { Depositor } from "../../src/Depositor.sol";
 import { ChainConfig } from "../config/ChainConfig.s.sol";

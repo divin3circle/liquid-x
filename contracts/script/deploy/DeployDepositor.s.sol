@@ -7,8 +7,7 @@ import {Parameters} from "../Parameters.sol";
 import {MainRouter} from "../../src/MainRouter.sol";
 import {Depositor} from "../../src/Depositor.sol";
 import {ChainConfig} from "../config/ChainConfig.s.sol";
-import {TokenConfig} from "../config/TokensConfig.s.sol";
-
+import {TokenConfig} from "../config/TokenConfigs.s.sol";
 contract DeployDeposit is Script, Parameters {
     function run() external returns (Depositor depositor) {
         ChainConfig config = new ChainConfig();
