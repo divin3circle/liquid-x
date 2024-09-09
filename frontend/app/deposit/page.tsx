@@ -8,11 +8,15 @@ function Deposit() {
   return (
     <div className="w-full">
       <DashboardNavbar />
-      <div className="flex flex-col gap-2 md:ml-2 items-center justify-center">
-        <Card />
-        <CreditCard />
+      <div className="lg:flex lg:justify-between lg:items-center lg:gap-10">
+        <div className="flex flex-col gap-10 md:ml-2 items-center justify-center flex-2">
+          <Card />
+          <CreditCard />
+        </div>
+        <div className="flex-1 mb-4">
+          <DepositAssets />
+        </div>
       </div>
-      <DepositAssets />
     </div>
   );
 }

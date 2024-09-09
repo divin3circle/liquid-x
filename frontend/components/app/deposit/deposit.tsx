@@ -7,6 +7,8 @@ import xaut from "../../../public/gold.svg";
 import ckes from "../../../public/kes.webp";
 import eth from "../../../public/wrapped-ether-weth-seeklogo.svg";
 import link from "../../../public/link.svg";
+import avax from "../../../public/avalanche.svg";
+import op from "../../../public/optimism.svg";
 
 function deposit() {
   return (
@@ -182,6 +184,62 @@ function deposit() {
                   <div>
                     <div className="font-bold">Chainlink</div>
                     <div className="text-sm opacity-50">LINK</div>
+                  </div>
+                </div>
+              </td>
+              <td>100</td>
+              <td>10</td>
+              <th className="flex items-center gap-3 text-[#2e59d1]">
+                <button className="btn btn-ghost btn-sm">Deposit</button>
+                <button className="btn btn-ghost btn-sm">Withdraw</button>
+              </th>
+            </tr>
+            {/* row 7 */}
+            <tr className="border-none">
+              <td>
+                <div className="flex items-center gap-3">
+                  <div className="avatar">
+                    <div className="mask rounded-full h-12 w-12">
+                      <Image
+                        src={op}
+                        alt="op"
+                        width={20}
+                        height={20}
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Optimism</div>
+                    <div className="text-sm opacity-50">OP</div>
+                  </div>
+                </div>
+              </td>
+              <td>100</td>
+              <td>10</td>
+              <th className="flex items-center gap-3 text-[#2e59d1]">
+                <button className="btn btn-ghost btn-sm">Deposit</button>
+                <button className="btn btn-ghost btn-sm">Withdraw</button>
+              </th>
+            </tr>
+            {/* row 8 */}
+            <tr className="border-none">
+              <td>
+                <div className="flex items-center gap-3">
+                  <div className="avatar">
+                    <div className="mask rounded-full h-12 w-12">
+                      <Image
+                        src={avax}
+                        alt="avax"
+                        width={20}
+                        height={20}
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Avalanche</div>
+                    <div className="text-sm opacity-50">AVAX</div>
                   </div>
                 </div>
               </td>
