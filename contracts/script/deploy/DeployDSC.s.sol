@@ -5,7 +5,7 @@ import {Script} from "forge-std/Script.sol";
 import {DSC} from "../../src/DSC.sol";
 
 contract DeployDSC is Script {
-    function run() external {
+    function run() external returns (DSC) {
         // Start broadcasting transactions
         vm.startBroadcast();
 
@@ -14,5 +14,6 @@ contract DeployDSC is Script {
 
         // Stop broadcasting transactions
         vm.stopBroadcast();
+        return dsc;
     }
 }
