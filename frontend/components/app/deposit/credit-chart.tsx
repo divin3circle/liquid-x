@@ -30,8 +30,8 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function CreditCardChart() {
-  const creditScore = 750;
-  const totalVisitors = 1000;
+  const creditScore = 770;
+  const maxCreditScore = 1000;
 
   return (
     <Card className="flex flex-col border-none shadow-none bg-transparent">
@@ -61,7 +61,7 @@ export function CreditCardChart() {
                           y={(viewBox.cy || 0) - 16}
                           className="fill-foreground text-xl font-bold"
                         >
-                          {creditScore}/{totalVisitors.toLocaleString()}
+                          {creditScore}/{maxCreditScore.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
