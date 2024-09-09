@@ -1,6 +1,8 @@
 import React from "react";
 import { Meteors } from "../../ui/meteors";
 import { SelectScrollable } from "./borrow-select";
+import liquidXLogo from "../../../public/liquidsvg.svg";
+import Image from "next/image";
 
 function BorrowCard() {
   return (
@@ -20,10 +22,18 @@ function BorrowCard() {
           <h1 className="font-bold text-base text-gray-500 mb-4 relative z-50 text-center my-2">
             Total amount borrowed on Polygon Amoy
           </h1>
-
-          <h1 className="kanit-regular font-bold text-2xl relative z-50 text-center w-full my-2">
-            $0.00
-          </h1>
+          <div className="flex gap-1 items-center justify-end">
+            <h1 className="kanit-regular font-bold text-4xl relative z-50 text-center w-full my-2">
+              0.00{" "}
+            </h1>
+            <Image
+              src={liquidXLogo}
+              width={30}
+              height={30}
+              alt="Logo"
+              className="object-contain bg-gray-300 rounded-full"
+            />
+          </div>
 
           <div className="flex justify-between items-center w-full mt-4">
             <button className="border px-4 py-1 rounded-lg hover:bg-[#2e59d1] kanit-regular text-sm hover:text-white transition-all duration-300 border-[#2e59d1] text-gray-500 ">

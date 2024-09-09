@@ -13,7 +13,7 @@ function CreditCard() {
               <h1 className="kanit-bold text-xl">Credit Score</h1>
             </div>
             <div className="">
-              <button className="border px-4 py-2 rounded-lg hover:bg-[#2e59d1] kanit-regular text-sm hover:text-white transition-all duration-300 border-[#2e59d1] text-gray-500 ">
+              <button className="border px-4 py-1 rounded-lg hover:bg-[#2e59d1] kanit-regular text-sm hover:text-white transition-all duration-300 border-[#2e59d1] text-gray-500 ">
                 Calculate
               </button>
             </div>
