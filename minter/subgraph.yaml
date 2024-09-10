@@ -1,0 +1,32 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Minter
+    network: optimism-sepolia
+    source:
+      address: "0x8435A9E33ed2EC66E5aC063DA5055a67B6229a07"
+      abi: Minter
+      startBlock: 17076736
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Burned
+        - Minted
+        - OwnershipTransferred
+      abis:
+        - name: Minter
+          file: ./abis/Minter.json
+      eventHandlers:
+        - event: Burned(indexed address,indexed uint256)
+          handler: handleBurned
+        - event: Minted(indexed address,indexed uint256)
+          handler: handleMinted
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+      file: ./src/minter.ts

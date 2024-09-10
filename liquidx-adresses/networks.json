@@ -1,0 +1,8 @@
+{
+  "optimism-sepolia": {
+    "ERC20Mock": {
+      "address": "0x93C6300dde76c66360E43B8e04bc7dcD35641944",
+      "startBlock": 17073749
+    }
+  }
+}

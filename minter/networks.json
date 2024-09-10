@@ -1,0 +1,8 @@
+{
+  "optimism-sepolia": {
+    "Minter": {
+      "address": "0x8435A9E33ed2EC66E5aC063DA5055a67B6229a07",
+      "startBlock": 17076736
+    }
+  }
+}
