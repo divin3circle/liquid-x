@@ -1,6 +1,8 @@
 # Compiler files
 cache/
 out/
+node_modules/
+frontend/node_modules/
 
 # Ignores development broadcast logs
 !/broadcast

@@ -37,7 +37,7 @@ function DashboardNavbar() {
       // Check if MetaMask is installed
       if (typeof window.ethereum !== "undefined") {
         // Create a new Web3 instance
-        const web3 = new Web3(window.ethereum);
+        const web3Instance = new Web3(window.ethereum);
 
         // Register the MetaMask plugin
         web3.registerPlugin(new MetamaskPlugin());
