@@ -7,7 +7,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
 import { createClient, gql } from "urql";
 import { cacheExchange, fetchExchange } from "@urql/core";
 import { FaArrowDown } from "react-icons/fa6";
