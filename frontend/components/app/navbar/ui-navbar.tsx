@@ -34,13 +34,13 @@ function DashboardNavbar() {
         </div>
       </div>
       <div className="lg:flex gap-2 items-center justify-between hidden">
-        <Input
+        {/* <Input
           placeholder="Search pools"
           className="ml-2 lg:w-[300px] md:w-[150px]"
         />
         <Button className="mx-4 -ml-1 flex bg-primary-500 hover:bg-transparent hover:text-primary">
           <IoMdSearch size={22} />
-        </Button>
+        </Button> */}
       </div>
       <div className="lg:flex items-center justify-between hidden md:w-1/2">
         <TooltipProvider>

@@ -43,7 +43,7 @@ export default async function Dashboard() {
   return (
     <div className="h-screen w-full bg-[#ffff]">
       <DashboardNavbar />
-      <div className="h-full">
+      <div className="h-full flex flex-col gap-4">
         {/* <DashboardGraph /> */}
         <TVLData data={result.data?.uniswapDayDatas} />
         {/* <Component /> */}
