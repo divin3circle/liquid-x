@@ -1,13 +1,13 @@
 {
-  "name": "liquidX",
+  "name": "liquidx",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ liquidX",
-    "create-local": "graph create --node http://localhost:8020/ liquidX",
-    "remove-local": "graph remove --node http://localhost:8020/ liquidX",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 liquidX",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ liquidx",
+    "create-local": "graph create --node http://localhost:8020/ liquidx",
+    "remove-local": "graph remove --node http://localhost:8020/ liquidx",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 liquidx",
     "test": "graph test"
   },
   "dependencies": {
