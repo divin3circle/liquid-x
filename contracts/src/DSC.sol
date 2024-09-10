@@ -9,7 +9,7 @@ contract DSC is ERC20Burnable, Ownable {
     error DSC__BurnAmountExceedsBalance();
     error DSC__NotZeroAddress();
 
-    constructor() ERC20("XNES", "XNES") Ownable(msg.sender) {}
+    constructor() ERC20("DSC", "DSC") Ownable(msg.sender) {}
 
     function burn(uint256 _amount) public override onlyOwner {
         uint256 balance = balanceOf(msg.sender);

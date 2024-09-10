@@ -209,5 +209,5 @@ contract Parameters {
     address public constant BASE_SEPOLIA_DSC =
         0xdA540b36E896B9A00F1f63bccE95AC1e40b0a3de;
     address public constant OPTIMISM_SEPOLIA_DSC =
-        0x52B69A18BE99c9848e412B3529cB23938FA0DE67;
+        0xA2357ff6B2f4F34e66688709923303E217c4A525;
 }
