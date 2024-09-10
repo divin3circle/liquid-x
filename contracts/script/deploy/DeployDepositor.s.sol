@@ -8,6 +8,7 @@ import {MainRouter} from "../../src/MainRouter.sol";
 import {Depositor} from "../../src/Depositor.sol";
 import {ChainConfig} from "../config/ChainConfig.s.sol";
 import {TokenConfig} from "../config/TokenConfigs.s.sol";
+
 contract DeployDeposit is Script, Parameters {
     function run() external returns (Depositor depositor) {
         ChainConfig config = new ChainConfig();
@@ -32,9 +33,10 @@ contract DeployDeposit is Script, Parameters {
         depositor.setAllowedToken(token.weth.token, true);
         depositor.setAllowedToken(token.link.token, true);
         depositor.setAllowedToken(token.avax.token, true);
-        depositor.setAllowedToken(token.uni.token, true);
-        depositor.setAllowedToken(token.usdc.token, true);
+        depositor.setAllowedToken(token.ckes.token, true);
+        depositor.setAllowedToken(token.gold.token, true);
         depositor.setAllowedToken(token.usdt.token, true);
+        depositor.setAllowedToken(token.op.token, true);
 
         depositor.setAllowedDestinationChain(
             CHAIN_SELECTOR_OPTIMISM_SEPOLIA,

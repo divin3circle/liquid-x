@@ -92,15 +92,15 @@ contract DeployMainRouter is Script, Parameters {
             18
         );
         mainRouter.addAllowedToken(
-            token.uni.chainSelector,
-            token.uni.token,
-            token.uni.priceFeed,
+            token.ckes.chainSelector,
+            token.ckes.token,
+            token.ckes.priceFeed,
             18
         );
         mainRouter.addAllowedToken(
-            token.usdc.chainSelector,
-            token.usdc.token,
-            token.usdc.priceFeed,
+            token.gold.chainSelector,
+            token.gold.token,
+            token.gold.priceFeed,
             6
         );
         mainRouter.addAllowedToken(
@@ -108,6 +108,12 @@ contract DeployMainRouter is Script, Parameters {
             token.usdt.token,
             token.usdt.priceFeed,
             6
+        );
+        mainRouter.addAllowedToken(
+            token.op.chainSelector,
+            token.op.token,
+            token.op.priceFeed,
+            18
         );
     }
 }

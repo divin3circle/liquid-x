@@ -18,9 +18,10 @@ contract TokenConfig is Script, Parameters {
         BaseToken weth;
         BaseToken link;
         BaseToken avax;
-        BaseToken uni;
-        BaseToken usdc;
+        BaseToken ckes;
+        BaseToken gold;
         BaseToken usdt;
+        BaseToken op;
     }
 
     function run() external view returns (Token memory token) {
@@ -60,20 +61,25 @@ contract TokenConfig is Script, Parameters {
             AVALANCHE_FUJI_AVAX,
             AVAX_PRICE_FEED
         );
-        token.uni = BaseToken(
+        token.ckes = BaseToken(
             CHAIN_SELECTOR_AVALANCHE_FUJI,
-            AVALANCHE_FUJI_UNI,
-            UNI_PRICE_FEED
+            AVALANCHE_FUJI_CKES,
+            CKES_PRICE_FEED
         );
-        token.usdc = BaseToken(
+        token.gold = BaseToken(
             CHAIN_SELECTOR_AVALANCHE_FUJI,
-            AVALANCHE_FUJI_USDC,
-            USDC_PRICE_FEED
+            AVALANCHE_FUJI_XAU,
+            XAU_PRICE_FEED
         );
         token.usdt = BaseToken(
             CHAIN_SELECTOR_AVALANCHE_FUJI,
             AVALANCHE_FUJI_USDT,
             USDT_PRICE_FEED
+        );
+        token.op = BaseToken(
+            CHAIN_SELECTOR_AVALANCHE_FUJI,
+            AVALANCHE_FUJI_OP,
+            OP_PRICE_FEED
         );
     }
 
@@ -102,20 +108,25 @@ contract TokenConfig is Script, Parameters {
             ETHEREUM_SEPOLIA_AVAX,
             AVAX_PRICE_FEED
         );
-        token.uni = BaseToken(
+        token.ckes = BaseToken(
             CHAIN_SELECTOR_ETHEREUM_SEPOLIA,
             ETHEREUM_SEPOLIA_UNI,
-            UNI_PRICE_FEED
+            CKES_PRICE_FEED
         );
-        token.usdc = BaseToken(
+        token.gold = BaseToken(
             CHAIN_SELECTOR_ETHEREUM_SEPOLIA,
             ETHEREUM_SEPOLIA_USDC,
-            USDC_PRICE_FEED
+            XAU_PRICE_FEED
         );
         token.usdt = BaseToken(
             CHAIN_SELECTOR_ETHEREUM_SEPOLIA,
             ETHEREUM_SEPOLIA_USDT,
             USDT_PRICE_FEED
+        );
+        token.op = BaseToken(
+            CHAIN_SELECTOR_ETHEREUM_SEPOLIA,
+            ETHEREUM_SEPOLIA_OP,
+            OP_PRICE_FEED
         );
     }
 
@@ -144,20 +155,25 @@ contract TokenConfig is Script, Parameters {
             ARBITRUM_SEPOLIA_AVAX,
             AVAX_PRICE_FEED
         );
-        token.uni = BaseToken(
+        token.ckes = BaseToken(
             CHAIN_SELECTOR_ARBITRUM_SEPOLIA,
-            ARBITRUM_SEPOLIA_UNI,
-            UNI_PRICE_FEED
+            ARBITRUM_SEPOLIA_CKES,
+            CKES_PRICE_FEED
         );
-        token.usdc = BaseToken(
+        token.gold = BaseToken(
             CHAIN_SELECTOR_ARBITRUM_SEPOLIA,
-            ARBITRUM_SEPOLIA_USDC,
-            USDC_PRICE_FEED
+            ARBITRUM_SEPOLIA_XAU,
+            XAU_PRICE_FEED
         );
         token.usdt = BaseToken(
             CHAIN_SELECTOR_ARBITRUM_SEPOLIA,
             ARBITRUM_SEPOLIA_USDT,
             USDT_PRICE_FEED
+        );
+        token.op = BaseToken(
+            CHAIN_SELECTOR_ARBITRUM_SEPOLIA,
+            ARBITRUM_SEPOLIA_OP,
+            OP_PRICE_FEED
         );
     }
 
@@ -182,20 +198,25 @@ contract TokenConfig is Script, Parameters {
             POLYGON_AMOY_AVAX,
             AVAX_PRICE_FEED
         );
-        token.uni = BaseToken(
+        token.ckes = BaseToken(
             CHAIN_SELECTOR_POLYGON_AMOY,
-            POLYGON_AMOY_UNI,
-            UNI_PRICE_FEED
+            POLYGON_AMOY_CKES,
+            CKES_PRICE_FEED
         );
-        token.usdc = BaseToken(
+        token.gold = BaseToken(
             CHAIN_SELECTOR_POLYGON_AMOY,
-            POLYGON_AMOY_USDC,
-            USDC_PRICE_FEED
+            POLYGON_AMOY_XAU,
+            XAU_PRICE_FEED
         );
         token.usdt = BaseToken(
             CHAIN_SELECTOR_POLYGON_AMOY,
             POLYGON_AMOY_USDT,
             USDT_PRICE_FEED
+        );
+        token.op = BaseToken(
+            CHAIN_SELECTOR_POLYGON_AMOY,
+            POLYGON_AMOY_OP,
+            OP_PRICE_FEED
         );
     }
 
@@ -220,19 +241,24 @@ contract TokenConfig is Script, Parameters {
             BASE_SEPOLIA_AVAX,
             AVAX_PRICE_FEED
         );
-        token.uni = BaseToken(
+        token.ckes = BaseToken(
             CHAIN_SELECTOR_BASE_SEPOLIA,
-            BASE_SEPOLIA_UNI,
-            UNI_PRICE_FEED
+            BASE_SEPOLIA_CKES,
+            CKES_PRICE_FEED
         );
-        token.usdc = BaseToken(
+        token.gold = BaseToken(
             CHAIN_SELECTOR_BASE_SEPOLIA,
-            BASE_SEPOLIA_USDC,
-            USDC_PRICE_FEED
+            BASE_SEPOLIA_XAU,
+            XAU_PRICE_FEED
         );
         token.usdt = BaseToken(
             CHAIN_SELECTOR_BASE_SEPOLIA,
             BASE_SEPOLIA_USDT,
+            USDT_PRICE_FEED
+        );
+        token.op = BaseToken(
+            CHAIN_SELECTOR_BASE_SEPOLIA,
+            BASE_SEPOLIA_OP,
             USDT_PRICE_FEED
         );
     }
@@ -262,20 +288,25 @@ contract TokenConfig is Script, Parameters {
             OPTIMISM_SEPOLIA_AVAX,
             OP_PRICE_FEED
         );
-        token.uni = BaseToken(
+        token.ckes = BaseToken(
             CHAIN_SELECTOR_OPTIMISM_SEPOLIA,
-            OPTIMISM_SEPOLIA_UNI,
-            UNI_PRICE_FEED
+            OPTIMISM_SEPOLIA_CKES,
+            CKES_PRICE_FEED
         );
-        token.usdc = BaseToken(
+        token.gold = BaseToken(
             CHAIN_SELECTOR_OPTIMISM_SEPOLIA,
-            OPTIMISM_SEPOLIA_USDC,
-            USDC_PRICE_FEED
+            OPTIMISM_SEPOLIA_XAU,
+            XAU_PRICE_FEED
         );
         token.usdt = BaseToken(
             CHAIN_SELECTOR_OPTIMISM_SEPOLIA,
             OPTIMISM_SEPOLIA_USDT,
             USDT_PRICE_FEED
+        );
+        token.op = BaseToken(
+            CHAIN_SELECTOR_OPTIMISM_SEPOLIA,
+            OPTIMISM_SEPOLIA_OP,
+            OP_PRICE_FEED
         );
     }
 }

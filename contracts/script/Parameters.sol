@@ -45,11 +45,13 @@ contract Parameters {
         0x244ec7F5753b2Fc10d0C2bAaB1AB55850E73a3AB;
     address public constant OPTIMISM_SEPOLIA_AVAX =
         0xe257e2a67407144C918acaD5e11c2582F77c0B1a;
-    address public constant OPTIMISM_SEPOLIA_UNI =
+    address public constant OPTIMISM_SEPOLIA_CKES =
         0x32B8F75d2AC926a0a906F24df3e8Fe2bA17Bd80a;
-    address public constant OPTIMISM_SEPOLIA_USDC =
+    address public constant OPTIMISM_SEPOLIA_XAU =
         0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
     address public constant OPTIMISM_SEPOLIA_USDT =
+        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+    address public constant OPTIMISM_SEPOLIA_OP =
         0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
 
     // Base Sepolia
@@ -61,11 +63,13 @@ contract Parameters {
         0x244ec7F5753b2Fc10d0C2bAaB1AB55850E73a3AB;
     address public constant BASE_SEPOLIA_AVAX =
         0xe257e2a67407144C918acaD5e11c2582F77c0B1a;
-    address public constant BASE_SEPOLIA_UNI =
+    address public constant BASE_SEPOLIA_CKES =
         0x32B8F75d2AC926a0a906F24df3e8Fe2bA17Bd80a;
-    address public constant BASE_SEPOLIA_USDC =
+    address public constant BASE_SEPOLIA_XAU =
         0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
     address public constant BASE_SEPOLIA_USDT =
+        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+    address public constant BASE_SEPOLIA_OP =
         0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
 
     // Polygon Amoy
@@ -77,11 +81,13 @@ contract Parameters {
         0x244ec7F5753b2Fc10d0C2bAaB1AB55850E73a3AB;
     address public constant POLYGON_AMOY_AVAX =
         0xe257e2a67407144C918acaD5e11c2582F77c0B1a;
-    address public constant POLYGON_AMOY_UNI =
+    address public constant POLYGON_AMOY_CKES =
         0x32B8F75d2AC926a0a906F24df3e8Fe2bA17Bd80a;
-    address public constant POLYGON_AMOY_USDC =
+    address public constant POLYGON_AMOY_XAU =
         0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
     address public constant POLYGON_AMOY_USDT =
+        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+    address public constant POLYGON_AMOY_OP =
         0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
 
     // Avalanche Fuji
@@ -93,12 +99,14 @@ contract Parameters {
         0x3001d62eBc86ab3A4eF91aFed766BB70182e251c;
     address public constant AVALANCHE_FUJI_AVAX =
         0xD28f8454873CEb4de41d537257044510c3A1d616;
-    address public constant AVALANCHE_FUJI_UNI =
+    address public constant AVALANCHE_FUJI_CKES =
         0x6cC55345982d82e3E6dC704a64cdbD58a6421b7A;
-    address public constant AVALANCHE_FUJI_USDC =
+    address public constant AVALANCHE_FUJI_XAU =
         0x620476fe1Bc36a37530b416B7d658024D5966b08;
     address public constant AVALANCHE_FUJI_USDT =
         0xAcA1eA8547E247a3125Da273b16C17Badc4f0812;
+    address public constant AVALANCHE_FUJI_OP =
+        0x6cC55345982d82e3E6dC704a64cdbD58a6421b7A;
 
     // Arbitrum Sepolia
     address public constant ARBITRUM_SEPOLIA_WBTC =
@@ -109,11 +117,13 @@ contract Parameters {
         0x244ec7F5753b2Fc10d0C2bAaB1AB55850E73a3AB;
     address public constant ARBITRUM_SEPOLIA_AVAX =
         0xe257e2a67407144C918acaD5e11c2582F77c0B1a;
-    address public constant ARBITRUM_SEPOLIA_UNI =
+    address public constant ARBITRUM_SEPOLIA_CKES =
         0x32B8F75d2AC926a0a906F24df3e8Fe2bA17Bd80a;
-    address public constant ARBITRUM_SEPOLIA_USDC =
+    address public constant ARBITRUM_SEPOLIA_XAU =
         0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
     address public constant ARBITRUM_SEPOLIA_USDT =
+        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+    address public constant ARBITRUM_SEPOLIA_OP =
         0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
 
     // Ethereum Sepolia
@@ -131,6 +141,8 @@ contract Parameters {
         0x65Ae0010421814B1303778Bc82a599f63028d899;
     address public constant ETHEREUM_SEPOLIA_USDT =
         0xB3718E52781F9Fc1C0b72A2966C2616E6d962a1C;
+    address public constant ETHEREUM_SEPOLIA_OP =
+        0x492E85cD024A271C4F19d8B7E9050Ef2bbFeDcCA;
 
     // Depositor addresses for different networks
     address public constant AVALANCHE_FUJI_DEPOSITOR =
@@ -175,9 +187,9 @@ contract Parameters {
         0x53f91dA33120F44893CB896b12a83551DEDb31c6;
     address public constant AVAX_PRICE_FEED =
         0xcacB7778Cba5C5526E6EBbA0A1aE74B4c310084B;
-    address public constant UNI_PRICE_FEED =
+    address public constant CKES_PRICE_FEED =
         0x7FcCDFD85f11BaFa09702DB78DcDE33feFb6a7AB;
-    address public constant USDC_PRICE_FEED =
+    address public constant XAU_PRICE_FEED =
         0x6e44e50E3cc14DD16e01C590DC1d7020cb36eD4C;
     address public constant USDT_PRICE_FEED =
         0xF83696ca1b8a266163bE252bE2B94702D4929392;
