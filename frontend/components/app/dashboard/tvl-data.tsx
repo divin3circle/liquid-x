@@ -64,7 +64,7 @@ export function TVLData({ data }: { data: UniswapDayData[] }) {
   }
 
   return (
-    <Card className="shadow-none border-0 mx-2 my-4">
+    <Card className="shadow-none border-0 mx-2 my-1">
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-2 sm:py-6">
           <CardTitle>TVL on Uniswarp</CardTitle>

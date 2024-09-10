@@ -37,7 +37,7 @@ const TableComponent = ({ data }: { data: TransfersData | undefined }) => {
     <div className="p-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold kanit-bold text-primary-500">
-          Transfer History(XNES)
+          Transfer History(DSC)
         </h1>
         <h1 className="text-sm font-bold px-4 kanit-bold bg-gray-100 rounded-md p-2 flex items-center justify-between gap-1">
           <span>Uniswarp</span>
@@ -45,7 +45,7 @@ const TableComponent = ({ data }: { data: TransfersData | undefined }) => {
         </h1>
       </div>
       <Table>
-        <TableCaption>A list of trending pools on Uniswarp.</TableCaption>
+        <TableCaption>A list of recent DSC transactions.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">txHash</TableHead>
