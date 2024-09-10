@@ -25,6 +25,7 @@ import bsc from "../../public/base.svg";
 import pol from "../../public/polygon.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   username: z.string().min(2).max(7),
@@ -39,7 +40,7 @@ function GetUserInformation() {
     },
   });
   const [loading, setLoading] = useState(false);
-  // const router = useRouter();
+  const router = useRouter();
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
     setLoading(true);
     try {
@@ -47,6 +48,11 @@ function GetUserInformation() {
     } catch (e) {
       console.log(e);
     }
+  };
+
+  const handleNavigation = (path: string) => {
+    setLoading(true);
+    router.replace(path);
   };
 
   if (loading) {
@@ -140,7 +146,10 @@ function GetUserInformation() {
               );
             }}
           />
-          <Link href="/dashboard">
+          <Link
+            href="/dashboard"
+            onClick={() => handleNavigation("/dashboard")}
+          >
             <Button
               type="submit"
               className="w-[80%] bg-primary-500 font-bold hover:bg-transparent border-2 border-primary-500 py-2 mx-4 hover:text-gray-500"
