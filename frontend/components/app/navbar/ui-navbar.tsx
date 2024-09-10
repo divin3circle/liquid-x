@@ -32,6 +32,7 @@ function DashboardNavbar() {
   const [account, setAccount] = useState<string | null>(null);
   const [chainId, setChainId] = useState<any>("");
   const [web3, setWeb3] = useState<any>("");
+
   const connectWallet = async () => {
     try {
       // Check if MetaMask is installed
@@ -117,7 +118,7 @@ function DashboardNavbar() {
         window.ethereum.removeAllListeners();
       }
     };
-  }, []);
+  }, [chainId]);
 
   const getNetworkName = (chainId: string) => {
     switch (chainId) {
@@ -154,7 +155,7 @@ function DashboardNavbar() {
         return "Polygon Amoy";
 
       default:
-        return "Unknown Network";
+        return "Unsupported Network";
     }
   };
   return (
@@ -198,25 +199,34 @@ function DashboardNavbar() {
           </Tooltip>
         </TooltipProvider>
 
-        <div className="mr-1">
-          {/* connect button */}
-          {account ? (
-            <div className="flex flex-col items-end mx-2 shadow-md p-2 rounded-md bg-primary-500 px-4 cursor-pointer">
-              <p className="text-sm font-medium text-white kanit-bold">
-                {account.slice(0, 6)}...{account.slice(-4)}
-              </p>
-              {chainId && (
-                <p className="text-xs text-gray-300">
-                  {getNetworkName(chainId)}
+        {getNetworkName(chainId) === "Unsupported Network" && (
+          <button disabled className="bg-red-500 py-2 px-2 rounded-md mr-1">
+            <p className="text-base text-gray-100 kanit-bold ">
+              Unsupported Network
+            </p>
+          </button>
+        )}
+        {getNetworkName(chainId) !== "Unsupported Network" && (
+          <div className="mr-1">
+            {/* connect button */}
+            {account ? (
+              <div className="flex flex-col items-end mx-2 shadow-md p-2 rounded-md bg-primary-500 px-4 cursor-pointer">
+                <p className="text-sm font-medium text-white kanit-bold">
+                  {account.slice(0, 6)}...{account.slice(-4)}
                 </p>
-              )}
-            </div>
-          ) : (
-            <Button className="flex bg-primary-500" onClick={connectWallet}>
-              Connect Wallet
-            </Button>
-          )}
-        </div>
+                {chainId && (
+                  <p className="text-xs text-gray-300">
+                    {getNetworkName(chainId)}
+                  </p>
+                )}
+              </div>
+            ) : (
+              <Button className="flex bg-primary-500" onClick={connectWallet}>
+                Connect Wallet
+              </Button>
+            )}
+          </div>
+        )}
       </div>
       <div className="flex lg:hidden mx-1">
         <Drawer>
