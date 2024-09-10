@@ -202,4 +202,12 @@ contract Parameters {
     bytes32 public constant OPTIMISM_SEPOLIA_DON_ID =
         0x66756e2d6f7074696d69736d2d7365706f6c69612d3100000000000000000000;
     uint64 public constant OPTIMISM_SEPOLIA_SUBSCRIPTION_ID = 228;
+
+    //XNES Token
+    address public constant POLYGON_AMOY_XNES =
+        0x15c51Cdd0b53789711C43a2d6C624dB20D52086E;
+    address public constant BASE_SEPOLIA_XNES =
+        0x8a9cdc4D0357b0020fab701C197df3BF9488DFFD;
+    address public constant OPTIMISM_SEPOLIA_XNES =
+        0x8a9cdc4D0357b0020fab701C197df3BF9488DFFD;
 }
