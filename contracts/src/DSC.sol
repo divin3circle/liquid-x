@@ -4,20 +4,20 @@ pragma solidity ^0.8.0;
 import {ERC20Burnable, ERC20} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-contract XNES is ERC20Burnable, Ownable {
-    error XNES__AmountMustBeMoreThanZero();
-    error XNES__BurnAmountExceedsBalance();
-    error XNES__NotZeroAddress();
+contract DSC is ERC20Burnable, Ownable {
+    error DSC__AmountMustBeMoreThanZero();
+    error DSC__BurnAmountExceedsBalance();
+    error DSC__NotZeroAddress();
 
     constructor() ERC20("XNES", "XNES") Ownable(msg.sender) {}
 
     function burn(uint256 _amount) public override onlyOwner {
         uint256 balance = balanceOf(msg.sender);
         if (_amount <= 0) {
-            revert XNES__AmountMustBeMoreThanZero();
+            revert DSC__AmountMustBeMoreThanZero();
         }
         if (balance < _amount) {
-            revert XNES__BurnAmountExceedsBalance();
+            revert DSC__BurnAmountExceedsBalance();
         }
         super.burn(_amount);
     }
@@ -27,11 +27,11 @@ contract XNES is ERC20Burnable, Ownable {
         uint256 _amount
     ) external onlyOwner returns (bool) {
         if (_to == address(0)) {
-            revert XNES__NotZeroAddress();
+            revert DSC__NotZeroAddress();
         }
 
         if (_amount <= 0) {
-            revert XNES__AmountMustBeMoreThanZero();
+            revert DSC__AmountMustBeMoreThanZero();
         }
 
         _mint(_to, _amount);

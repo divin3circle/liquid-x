@@ -2,18 +2,18 @@
 pragma solidity ^0.8.0;
 
 import {Script} from "forge-std/Script.sol";
-import {XNES} from "../../src/XNES.sol";
+import {DSC} from "../../src/DSC.sol";
 
-contract DeployXNES is Script {
-    function run() external returns (XNES) {
+contract DeployDSC is Script {
+    function run() external returns (DSC) {
         // Start broadcasting transactions
         vm.startBroadcast();
 
         // Deploy the DSC contract
-        XNES xnes = new XNES();
+        DSC dsc = new DSC();
 
         // Stop broadcasting transactions
         vm.stopBroadcast();
-        return xnes;
+        return dsc;
     }
 }
