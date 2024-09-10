@@ -1,0 +1,78 @@
+type Burn @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  chainSelector: BigInt! # uint64
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Deposit @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  chainSelector: BigInt! # uint64
+  token: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Mint @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  chainSelector: BigInt! # uint64
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Redeem @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  chainSelector: BigInt! # uint64
+  token: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RequestFulfilled @entity(immutable: true) {
+  id: Bytes!
+  MainRouter_id: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RequestSent @entity(immutable: true) {
+  id: Bytes!
+  MainRouter_id: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Response @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  requestId: Bytes! # bytes32
+  credit: Int! # uint16
+  response: Bytes! # bytes
+  err: Bytes! # bytes
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
