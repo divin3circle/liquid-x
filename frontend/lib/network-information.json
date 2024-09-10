@@ -1,0 +1,149 @@
+{
+  "84532": {
+    "name": "Base Sepolia",
+    "CHAIN_SELECTOR": "10344971235874465080",
+    "DEPOSITOR_ADDRESS": "",
+    "MAIN_ROUTER_ADDRESS": "",
+    "MINTER_ADDRESS": "",
+    "TOKEN": {
+      "WBTC": {
+        "name": "Wrapped Bitcoin",
+        "decimals": 18,
+        "address": ""
+      },
+      "WETH": {
+        "name": "Wrapped Ether",
+        "decimals": 18,
+        "address": ""
+      },
+      "LINK": {
+        "name": "Chainlink",
+        "decimals": 18,
+        "address": ""
+      },
+      "AVAX": {
+        "name": "Avalanche",
+        "decimals": 18,
+        "address": ""
+      },
+      "cKES": {
+        "name": "cKES",
+        "decimals": 18,
+        "address": ""
+      },
+      "XAUT": {
+        "name": "Gold",
+        "decimals": 6,
+        "address": ""
+      },
+      "USDT": {
+        "name": "Tether USD",
+        "decimals": 6,
+        "address": ""
+      },
+      "DSC": {
+        "name": "DSC",
+        "decimals": 18,
+        "address": ""
+      }
+    }
+  },
+  "80002": {
+    "name": "Polygon Amoy",
+    "CHAIN_SELECTOR": "16281711391670634445",
+    "DEPOSITOR_ADDRESS": "",
+    "MAIN_ROUTER_ADDRESS": "",
+    "MINTER_ADDRESS": "",
+    "TOKEN": {
+      "WBTC": {
+        "name": "Wrapped Bitcoin",
+        "decimals": 18,
+        "address": ""
+      },
+      "WETH": {
+        "name": "Wrapped Ether",
+        "decimals": 18,
+        "address": ""
+      },
+      "LINK": {
+        "name": "Chainlink",
+        "decimals": 18,
+        "address": ""
+      },
+      "AVAX": {
+        "name": "Avalanche",
+        "decimals": 18,
+        "address": ""
+      },
+      "cKES": {
+        "name": "cKES",
+        "decimals": 18,
+        "address": ""
+      },
+      "XAUT": {
+        "name": "Gold",
+        "decimals": 6,
+        "address": ""
+      },
+      "USDT": {
+        "name": "Tether USD",
+        "decimals": 6,
+        "address": ""
+      },
+      "DSC": {
+        "name": "DSC",
+        "decimals": 18,
+        "address": ""
+      }
+    }
+  },
+  "11155420": {
+    "name": "Optimism Sepolia",
+    "CHAIN_SELECTOR": "5224473277236331295",
+    "DEPOSITOR_ADDRESS": "",
+    "MAIN_ROUTER_ADDRESS": "",
+    "MINTER_ADDRESS": "",
+    "TOKEN": {
+      "WBTC": {
+        "name": "Wrapped Bitcoin",
+        "decimals": 18,
+        "address": ""
+      },
+      "WETH": {
+        "name": "Wrapped Ether",
+        "decimals": 18,
+        "address": ""
+      },
+      "LINK": {
+        "name": "Chainlink",
+        "decimals": 18,
+        "address": ""
+      },
+      "AVAX": {
+        "name": "Avalanche",
+        "decimals": 18,
+        "address": ""
+      },
+      "cKES": {
+        "name": "cKES",
+        "decimals": 18,
+        "address": ""
+      },
+      "XAUT": {
+        "name": "Gold",
+        "decimals": 6,
+        "address": ""
+      },
+      "USDT": {
+        "name": "Tether USD",
+        "decimals": 6,
+        "address": ""
+      },
+      "DSC": {
+        "name": "DSC",
+        "decimals": 18,
+        "address": ""
+      }
+    }
+  }
+}
