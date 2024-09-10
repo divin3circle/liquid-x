@@ -1,8 +1,7 @@
 {
   "optimism-sepolia": {
     "EACAggregatorProxy": {
-      "address": "0x3015aa11f5c2D4Bd0f891E708C8927961b38cE7D",
-      "startBlock": 6497278
+      "address": "0x61Ec26aA57019C486B10502285c5A3D4A4750AD7"
     }
   }
 }
