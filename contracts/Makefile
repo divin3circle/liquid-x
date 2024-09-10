@@ -8,14 +8,14 @@ update_abi:
 	@forge build --silent && jq '.abi' out/$(CONTRACT).sol/$(CONTRACT).json > abi/$(CONTRACT).json
 
 deploy_main_router:
-	@forge script script/deploy/DeployMainRouter.s.sol:DeployMainRouter --rpc-url $(OPTIMISM_SEPOLIA_RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast
+	@forge script script/deploy/DeployMainRouter.s.sol:DeployMainRouter --rpc-url $(OPTIMISM_SEPOLIA_RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast --verify --etherscan-api-key $(OPTIMISM_API_KEY) -vvvv
 
 # Target for Optimism Sepolia
 deploy_depositor:
-	@forge script script/deploy/DeployDeposit.s.sol:DeployDeposit --rpc-url $(RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast --skip-simulation --gas-limit 10000000
+	@forge script script/deploy/DeployDepositor.s.sol:DeployDeposit --rpc-url $(POLYGON_AMOY_RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast --skip-simulation --gas-limit 10000000 --verify --etherscan-api-key $(POLYGON_API_KEY) -vvvv
 
 deploy_minter:
-	@forge script script/deploy/DeployMinter.s.sol:DeployMinter --rpc-url $(RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast --skip-simulation --gas-limit 5000000
+	@forge script script/deploy/DeployMinter.s.sol:DeployMinter --rpc-url $(BASE_SEPOLIA_RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast --skip-simulation --gas-limit 5000000 --verify --etherscan-api-key $(POLYGON_API_KEY) -vvvv
 
 mint_token:	
 	@forge script script/interaction/MintToken.s.sol:MintToken --sig "mintToken(address)" $(USER) --rpc-url $(RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --skip-simulation --gas-limit 5000000 --broadcast

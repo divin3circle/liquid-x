@@ -38,57 +38,57 @@ contract Parameters {
     // Token addresses for different networks
     // These will be replaced with actual addresses
     address public constant OPTIMISM_SEPOLIA_WBTC =
-        0xF6905F1E4ad86f8C3a1Ebfca3E04a9e4d2adDD0D;
+        0x93C6300dde76c66360E43B8e04bc7dcD35641944;
     address public constant OPTIMISM_SEPOLIA_WETH =
-        0x9a24BD7833859d2364EaD5A4aF4b16799693DF12;
+        0xC27EdEfA70C53135EC229F1EcC7c2219adA0914c;
     address public constant OPTIMISM_SEPOLIA_LINK =
-        0x244ec7F5753b2Fc10d0C2bAaB1AB55850E73a3AB;
+        0xE4a9eE5CBe3EBA7760Fe1DA4566cE97ef1fA5674;
     address public constant OPTIMISM_SEPOLIA_AVAX =
-        0xe257e2a67407144C918acaD5e11c2582F77c0B1a;
+        0x4D90A816133C48C90Db46881c92a73E4E91A09CB;
     address public constant OPTIMISM_SEPOLIA_CKES =
-        0x32B8F75d2AC926a0a906F24df3e8Fe2bA17Bd80a;
+        0xEd270f83c58bc698bE7fCa3de4FF935069c6d431;
     address public constant OPTIMISM_SEPOLIA_XAU =
-        0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
+        0xdAa065d31736606d5bfa059EE528624eE379a73d;
     address public constant OPTIMISM_SEPOLIA_USDT =
-        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+        0xD898bc60Fc9d5837D86DE609100Af6Ea9825C035;
     address public constant OPTIMISM_SEPOLIA_OP =
-        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+        0x9b5328599cEfEcd181b237f7138b298A9428692A;
 
     // Base Sepolia
     address public constant BASE_SEPOLIA_WBTC =
-        0xF6905F1E4ad86f8C3a1Ebfca3E04a9e4d2adDD0D;
+        0x5701139aE00FbB6060681803CD577d69053bB5b8;
     address public constant BASE_SEPOLIA_WETH =
-        0x9a24BD7833859d2364EaD5A4aF4b16799693DF12;
+        0x979CCbA756D0AF02390cBCd039D186935Bd8C815;
     address public constant BASE_SEPOLIA_LINK =
-        0x244ec7F5753b2Fc10d0C2bAaB1AB55850E73a3AB;
+        0xf4c2fb6fe04c6f99B36Fa9f0391971c4E5247afD;
     address public constant BASE_SEPOLIA_AVAX =
-        0xe257e2a67407144C918acaD5e11c2582F77c0B1a;
+        0x93C6300dde76c66360E43B8e04bc7dcD35641944;
     address public constant BASE_SEPOLIA_CKES =
-        0x32B8F75d2AC926a0a906F24df3e8Fe2bA17Bd80a;
+        0xC27EdEfA70C53135EC229F1EcC7c2219adA0914c;
     address public constant BASE_SEPOLIA_XAU =
-        0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
+        0xE4a9eE5CBe3EBA7760Fe1DA4566cE97ef1fA5674;
     address public constant BASE_SEPOLIA_USDT =
-        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+        0x4D90A816133C48C90Db46881c92a73E4E91A09CB;
     address public constant BASE_SEPOLIA_OP =
-        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+        0xEd270f83c58bc698bE7fCa3de4FF935069c6d431;
 
     // Polygon Amoy
     address public constant POLYGON_AMOY_WBTC =
-        0xF6905F1E4ad86f8C3a1Ebfca3E04a9e4d2adDD0D;
+        0x5B1141AB6250e2c89A13Ed4E65EDfcDc088BB4b5;
     address public constant POLYGON_AMOY_WETH =
-        0x9a24BD7833859d2364EaD5A4aF4b16799693DF12;
+        0x85c16AB9B36c2b80a1Faef7E0fb5Ad86685BEBf9;
     address public constant POLYGON_AMOY_LINK =
-        0x244ec7F5753b2Fc10d0C2bAaB1AB55850E73a3AB;
+        0xC84Cb1F362A5c39B77D8D355012691bD32513183;
     address public constant POLYGON_AMOY_AVAX =
-        0xe257e2a67407144C918acaD5e11c2582F77c0B1a;
+        0x32BD7647043E3B72E2BA5492C74a7887600B2F99;
     address public constant POLYGON_AMOY_CKES =
-        0x32B8F75d2AC926a0a906F24df3e8Fe2bA17Bd80a;
+        0x976abA97272DC6bE8C93ea134FE273D8F9Bb99f2;
     address public constant POLYGON_AMOY_XAU =
-        0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
+        0x85fF250e0bFa6c32211489838A4B91B0EB9dB1FF;
     address public constant POLYGON_AMOY_USDT =
-        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+        0x61c9f0Cc4213CBB609bA0E216D54470B0d498C68;
     address public constant POLYGON_AMOY_OP =
-        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+        0x49F06a3C04430889FF7ce29D27D1672c82bbBA86;
 
     // Avalanche Fuji
     address public constant AVALANCHE_FUJI_WBTC =
@@ -106,7 +106,7 @@ contract Parameters {
     address public constant AVALANCHE_FUJI_USDT =
         0xAcA1eA8547E247a3125Da273b16C17Badc4f0812;
     address public constant AVALANCHE_FUJI_OP =
-        0x6cC55345982d82e3E6dC704a64cdbD58a6421b7A;
+        0xf3138B59cAcbA1a4d7d24fA7b184c20B3941433e;
 
     // Arbitrum Sepolia
     address public constant ARBITRUM_SEPOLIA_WBTC =
@@ -122,7 +122,7 @@ contract Parameters {
     address public constant ARBITRUM_SEPOLIA_XAU =
         0xDFf5Ba9FCff83cE455e45De7572B6259b0E7D7dE;
     address public constant ARBITRUM_SEPOLIA_USDT =
-        0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
+        0x98EeB02BC20c5e7079983e8F0D0D839dFc8F74fA;
     address public constant ARBITRUM_SEPOLIA_OP =
         0x75b86D7B224Fd88f785BB5FaC5e261D9EFde3047;
 
@@ -142,7 +142,7 @@ contract Parameters {
     address public constant ETHEREUM_SEPOLIA_USDT =
         0xB3718E52781F9Fc1C0b72A2966C2616E6d962a1C;
     address public constant ETHEREUM_SEPOLIA_OP =
-        0x492E85cD024A271C4F19d8B7E9050Ef2bbFeDcCA;
+        0x902Be1A15cf92e4b59ae756bA869Da531A267937;
 
     // Depositor addresses for different networks
     address public constant AVALANCHE_FUJI_DEPOSITOR =
@@ -152,11 +152,11 @@ contract Parameters {
     address public constant ARBITRUM_SEPOLIA_DEPOSITOR =
         0x1111111111111111111111111111111111111111;
     address public constant POLYGON_AMOY_DEPOSITOR =
-        0x1111111111111111111111111111111111111111;
+        0xcc7ccB496a8fda44Ae146A53DCC915b814df3Cfd;
     address public constant BASE_SEPOLIA_DEPOSITOR =
-        0x1111111111111111111111111111111111111111;
+        0x0d98C55d41f8b28d2E3BF3E3665308fAa032C73d;
     address public constant OPTIMISM_SEPOLIA_DEPOSITOR =
-        0x1111111111111111111111111111111111111111;
+        0x961b2ae0Fb373f3a41E1f9a4be80028868c64483;
 
     // Minter addresses for different networks
     // @Dancan254: These will be replaced with actual addresses
@@ -167,16 +167,16 @@ contract Parameters {
     address public constant ARBITRUM_SEPOLIA_MINTER =
         0x1111111111111111111111111111111111111111;
     address public constant POLYGON_AMOY_MINTER =
-        0x1111111111111111111111111111111111111111;
+        0x952F13984971588f3ed84718d72e3feBc7f665Af;
     address public constant BASE_SEPOLIA_MINTER =
-        0x1111111111111111111111111111111111111111;
+        0xFc64C331d32267DbCBe81E386D55297baAe14aB8;
     address public constant OPTIMISM_SEPOLIA_MINTER =
-        0x1111111111111111111111111111111111111111;
+        0x8435A9E33ed2EC66E5aC063DA5055a67B6229a07;
 
     //Optimism_MainRouter
     //Needs to be updated with the actual addressS
     address public constant OPTIMISM_SEPOLIA_MAIN_ROUTER =
-        0x1111111111111111111111111111111111111111;
+        0x5A33f51C1D8595b8D3deb708bc8D116F403896ef;
 
     //Optimism PriceFeedAddress
     address public constant BTC_PRICE_FEED =
@@ -188,9 +188,9 @@ contract Parameters {
     address public constant AVAX_PRICE_FEED =
         0xcacB7778Cba5C5526E6EBbA0A1aE74B4c310084B;
     address public constant CKES_PRICE_FEED =
-        0x7FcCDFD85f11BaFa09702DB78DcDE33feFb6a7AB;
+        0x280eE98Cb396513DB0aBa22318d9B6F8AbbAa6D8;
     address public constant XAU_PRICE_FEED =
-        0x6e44e50E3cc14DD16e01C590DC1d7020cb36eD4C;
+        0xa6932B792e4b4FfA1e78e63671f42d0aff02eD73;
     address public constant USDT_PRICE_FEED =
         0xF83696ca1b8a266163bE252bE2B94702D4929392;
     address public constant OP_PRICE_FEED =
@@ -202,4 +202,12 @@ contract Parameters {
     bytes32 public constant OPTIMISM_SEPOLIA_DON_ID =
         0x66756e2d6f7074696d69736d2d7365706f6c69612d3100000000000000000000;
     uint64 public constant OPTIMISM_SEPOLIA_SUBSCRIPTION_ID = 228;
+
+    //XNES Token
+    address public constant POLYGON_AMOY_XNES =
+        0x15c51Cdd0b53789711C43a2d6C624dB20D52086E;
+    address public constant BASE_SEPOLIA_XNES =
+        0x8a9cdc4D0357b0020fab701C197df3BF9488DFFD;
+    address public constant OPTIMISM_SEPOLIA_XNES =
+        0x8a9cdc4D0357b0020fab701C197df3BF9488DFFD;
 }
