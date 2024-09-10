@@ -5,7 +5,7 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: EACAggregatorProxy
+    name: EACAggregatorProxy_1
     network: optimism-sepolia
     source:
       address: "0x3015aa11f5c2D4Bd0f891E708C8927961b38cE7D"
@@ -34,7 +34,7 @@ dataSources:
           handler: handleOwnershipTransferred
       file: ./src/eac-aggregator-proxy.ts
   - kind: ethereum
-    name: EACAggregatorProxy
+    name: EACAggregatorProxy_2
     network: optimism-sepolia
     source:
       address: "0x61Ec26aA57019C486B10502285c5A3D4A4750AD7"

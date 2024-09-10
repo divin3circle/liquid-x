@@ -99,6 +99,7 @@ export function TVLData({ data }: { data: UniswapDayData[] }) {
               <CartesianGrid vertical={false} />
               <XAxis
                 dataKey="date"
+                className=""
                 tickLine={false}
                 axisLine={false}
                 tickMargin={8}
@@ -138,7 +139,11 @@ export function TVLData({ data }: { data: UniswapDayData[] }) {
                   />
                 }
               />
-              <Bar dataKey="tvlUSD" fill={`#2e59d1`} />
+              <Bar
+                dataKey="tvlUSD"
+                fill={`#2e59d1`}
+                className="hover:bg-red-500 transition-all duration-300 ease-in-out hover:scale-95"
+              />
             </BarChart>
           </ResponsiveContainer>
         </ChartContainer>
