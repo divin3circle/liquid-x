@@ -1,0 +1,18 @@
+{
+  "name": "Pricefeeds LiquidX Optimisim",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ Pricefeeds LiquidX Optimisim",
+    "create-local": "graph create --node http://localhost:8020/ Pricefeeds LiquidX Optimisim",
+    "remove-local": "graph remove --node http://localhost:8020/ Pricefeeds LiquidX Optimisim",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 Pricefeeds LiquidX Optimisim",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.81.0",
+    "@graphprotocol/graph-ts": "0.32.0"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
+}
