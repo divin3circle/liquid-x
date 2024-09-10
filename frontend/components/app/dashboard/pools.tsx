@@ -10,29 +10,23 @@ import {
 import { createClient, gql } from "urql";
 import { cacheExchange, fetchExchange } from "@urql/core";
 import { FaArrowDown } from "react-icons/fa6";
-
-type Pool = {
+import { format, fromUnixTime } from "date-fns";
+type Transfer = {
+  value: string;
+  transactionHash: string;
+  to: string;
   id: string;
-  token0: {
-    symbol: string;
-    name: string;
-  };
-  token1: {
-    symbol: string;
-    name: string;
-  };
-  volumeUSD: string;
-  totalValueLockedUSD: string;
-  liquidity: string;
-  feeTier: string;
-  txCount: string;
+  from: string;
+  blockTimestamp: string;
+  blockNumber: string;
 };
 
-type PoolsData = {
-  pools: Pool[];
+type TransfersData = {
+  transfers: Transfer[];
 };
 
-const TableComponent = ({ data }: { data: PoolsData | undefined }) => {
+const TableComponent = ({ data }: { data: TransfersData | undefined }) => {
+  console.log(data);
   if (!data) {
     <div className="flex items-center justify-center h-screen">
       <span className="loading loading-ring loading-lg"></span>
@@ -43,7 +37,7 @@ const TableComponent = ({ data }: { data: PoolsData | undefined }) => {
     <div className="p-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold kanit-bold text-primary-500">
-          Trending Pools
+          Transfer History(XNES)
         </h1>
         <h1 className="text-sm font-bold px-4 kanit-bold bg-gray-100 rounded-md p-2 flex items-center justify-between gap-1">
           <span>Uniswarp</span>
@@ -54,36 +48,32 @@ const TableComponent = ({ data }: { data: PoolsData | undefined }) => {
         <TableCaption>A list of trending pools on Uniswarp.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Symbol</TableHead>
-            <TableHead>Volume(USD)</TableHead>
-            <TableHead>Liquidity(USD)</TableHead>
-            <TableHead className="text-right">Transactions</TableHead>
-            <TableHead className="text-right">TVL(USD)</TableHead>
+            <TableHead className="w-[100px]">txHash</TableHead>
+            <TableHead>Timestamp</TableHead>
+            <TableHead>Sender</TableHead>
+            <TableHead className="text-right">Value(DSC)</TableHead>
+            <TableHead className="text-right">Receiver</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data?.pools.map((pool) => {
-            const volumeInUSDBillions = (
-              parseFloat(pool.volumeUSD) / 1e9
-            ).toFixed(2);
-            const liquidityInUSDBillions = (
-              parseFloat(pool.liquidity) / 1e12
-            ).toFixed(2);
-            const tvlInUSDBillions = (
-              parseFloat(pool.totalValueLockedUSD) / 1e6
-            ).toFixed(2);
+          {data?.transfers.map((transfer) => {
             return (
-              <TableRow key={pool.id}>
+              <TableRow key={transfer.id}>
                 <TableCell className="font-medium">
-                  {pool.token0.symbol} / {pool.token1.symbol}
+                  {transfer.transactionHash.substring(0, 6)}...
                 </TableCell>
-                <TableCell>{volumeInUSDBillions} B</TableCell>
-                <TableCell>{liquidityInUSDBillions} T</TableCell>
+                <TableCell>
+                  {format(
+                    fromUnixTime(parseInt(transfer.blockTimestamp)),
+                    "dd MMM yyyy"
+                  )}
+                </TableCell>
+                <TableCell>{transfer.from.substring(0, 16)}...</TableCell>
                 <TableCell className="text-right">
-                  {Number(pool.txCount).toLocaleString()}
+                  {Number(transfer.value).toLocaleString()}
                 </TableCell>
                 <TableCell className="text-right">
-                  {tvlInUSDBillions} M
+                  {transfer.to.substring(0, 16)}
                 </TableCell>
               </TableRow>
             );
@@ -95,27 +85,20 @@ const TableComponent = ({ data }: { data: PoolsData | undefined }) => {
 };
 
 const client = createClient({
-  url: `https://gateway.thegraph.com/api/${process.env.SUBGRAPH_API}/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV`,
+  url: ` https://api.studio.thegraph.com/query/88585/liquidx-adresses/version/latest`,
   exchanges: [cacheExchange, fetchExchange],
 });
 
 const DATA_QUERY = gql`
   {
-    pools(orderBy: volumeUSD, orderDirection: desc, first: 3) {
+    transfers(orderBy: blockTimestamp, orderDirection: desc) {
+      value
+      transactionHash
+      to
       id
-      token0 {
-        symbol
-        name
-      }
-      token1 {
-        symbol
-        name
-      }
-      volumeUSD
-      totalValueLockedUSD
-      liquidity
-      feeTier
-      txCount
+      from
+      blockTimestamp
+      blockNumber
     }
   }
 `;
