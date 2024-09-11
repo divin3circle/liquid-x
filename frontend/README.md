@@ -16,25 +16,9 @@ Liquid-X is a cross-chain lending and borrowing application built on the Optimis
 - Recharts
 - Appollo Client
 
-## Bounties Targeting
+### Running the project locally
 
-### 1. The Graph & GraphQL
-
-- Implement GraphQL for efficient data querying from Uniswap tvl data
-- Integrate The Graph for blockchain data indexing
-- Developed subgraphs that indexed Liquid-X's lending and borrowing events
-
-#### Subgraph Development
-
-1. [liquidx-addresses](https://thegraph.com/studio/subgraph/liquidx-adresses/endpoints)
-1. [liquidx-burns](https://api.studio.thegraph.com/proxy/88585/liquidx/version/latest/graphql)
-1. [pricefeedsv0.0.1](https://api.studio.thegraph.com/proxy/88585/pricefeeds-liquidx-v1/v0.0.1/graphql)
-
-### 2. Optimism
-
-- Deployed LiquidX subgraphs on the Optimism testnet
-- LiquidX main router is deployed on the Optimism mainnet, hence all communication between other EVM chains and LiquidX is done through the Optimism chain.
-
-### 3. Base
-
-- Depositor and minter contracts are deployed on the Base testnet, allowing users to borrow and deposit assets on the Base chain without selling their assets on other chains.
+1. Clone the repository
+2. `cd frontend`
+3. Run `npm install`
+4. Run `npm run dev`

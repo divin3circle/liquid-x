@@ -27,7 +27,7 @@ function Sidebar() {
     );
   }
   return (
-    <aside className="hidden lg:flex flex-col gap-48 md:w-[25%] lg:w-[20%] mt-0 bg-[#fcfcfc] shadow-md h-screen pl-2">
+    <aside className="hidden lg:flex flex-col gap-48 md:w-[25%] lg:w-[20%] w-full mt-0 bg-[#fcfcfc] shadow-md h-screen pl-2">
       <div className="flex gap-2 items-center mx-4 my-4">
         <Image src={logo} alt="LiquidX" className="" width={50} height={50} />
         <h1 className="font-bold ">liquidX</h1>

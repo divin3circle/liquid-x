@@ -88,6 +88,42 @@ Liquid-X's initial support will focus on commonly used tokens such as ETH, USDT,
 - **Marketing Campaigns**: Launch targeted campaigns to attract users and liquidity providers.
 - **Incentive Programs**: Offer incentives like liquidity mining and rewards for early adopters.
 
+
+## Bounties Targeting
+
+### 1. The Graph & GraphQL
+
+- Implement GraphQL for efficient data querying from Uniswap tvl data
+- Integrate The Graph for blockchain data indexing
+- Developed subgraphs that indexed Liquid-X's lending and borrowing events
+
+#### Subgraph Development
+
+1. [liquidx-addresses](https://thegraph.com/studio/subgraph/liquidx-adresses/endpoints)
+1. [liquidx-burns](https://api.studio.thegraph.com/proxy/88585/liquidx/version/latest/graphql)
+1. [pricefeedsv0.0.1](https://api.studio.thegraph.com/proxy/88585/pricefeeds-liquidx-v1/v0.0.1/graphql)
+
+### 2. Optimism
+
+- Deployed LiquidX subgraphs on the Optimism testnet
+- LiquidX main router is deployed on the Optimism mainnet, hence all communication between other EVM chains and LiquidX is done through the Optimism chain.
+
+### 3. Base
+
+- Depositor and minter contracts are deployed on the Base testnet, allowing users to borrow and deposit assets on the Base chain without selling their assets on other chains.
+
+### Web3JS
+
+- Web3JS is used to interact with the blockchain and the smart contracts.
+- Deployed LiquidX on fleek
+- Implemented namespace to set custom names representing addresses
+
+### SafariDAO
+
+- The project implements a robust protocol for cross-chain lending and borrowing, providing users with the ability to lend and borrow assets across different blockchain networks that plans to add RWAs as collateral to allow more users to access DeFi.
+- The project is designed to be a decentralized and secure platform for lending and borrowing assets across different blockchain networks, providing users with the ability to lend and borrow assets across different blockchain networks.
+
+
 ## Contributing
 
 We welcome contributions from the community! Please feel free to submit a pull request or open an issue.
