@@ -1,8 +1,9 @@
 ---
 
 # Liquid-X
-
-![Liquid-X Banner](https://via.placeholder.com/800x200.png)
+<p align="center">
+  <img src="/frontend/public/logo.png" alt="Liquid-X Banner" width="250px">
+</p>
 
 **Liquid-X** is a cross-chain lending and borrowing application built on the **Optimism**, **Base**, and **Polygon** blockchains. The protocol is designed to offer seamless asset transfers and decentralized finance (DeFi) services across multiple blockchain networks. By leveraging advanced technologies such as **Chainlink CCIP** for cross-chain interoperability, **GraphQL** for efficient data querying, **Web3.js** for frontend and backend integration, and **Foundry** for smart contract development, Liquid-X aims to create a fluid and user-friendly DeFi experience.
 
@@ -32,7 +33,7 @@ The **burn-and-mint** mechanism enables the bridging of assets by burning tokens
 
 Below is an ER Diagram representing the key entities and their relationships within the Liquid-X protocol:
 
-![ER Diagram](https://via.placeholder.com/600x400.png)
+![ER Diagram](/images/fllow.png)
 
 ## Real World Asset (RWA) Integration
 
