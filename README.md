@@ -95,4 +95,8 @@ We welcome contributions from the community! Please feel free to submit a pull r
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Additional Documentation
+
+For more detailed information about contracts, please refer to the [Contracts README](./contracts/ContractsReadme.md).
+
 ---
