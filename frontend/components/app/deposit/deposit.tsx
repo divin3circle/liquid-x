@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import wbtc from "../../../public/wbtc.svg";
 import usdt from "../../../public/tether.svg";
 import xaut from "../../../public/gold.svg";
@@ -9,8 +9,88 @@ import eth from "../../../public/wrapped-ether-weth-seeklogo.svg";
 import link from "../../../public/link.svg";
 import avax from "../../../public/avalanche.svg";
 import op from "../../../public/optimism.svg";
+import getBalance from "../../../web3/getBalance";
+import NetworkInformation from "../../../lib/network-information.json";
+import { getDepositedAmount } from "../../../web3/getDeposited.js";
+//import { BlockchainInteractions } from "../../../web3/namespace";
+import Web3Service from "../../../web3/web3Service";
 
-function deposit() {
+function Deposit() {
+  const [balances, setBalances] = useState<any>({});
+  const [depositedBalances, setDepositedBalances] = useState<any>({});
+  const [loading, setLoading] = useState(false);
+  const walletAddress = "0x57AB4e29d13E063D791Ec02116cef032314F787B";
+  const chainId = 80002;
+  const [ensName, setEnsName] = useState("");
+  const web3Service = Web3Service;
+
+  useEffect(() => {
+    async function fetchBalances() {
+      setLoading(true);
+      const tokens = [
+        "WBTC",
+        "WETH",
+        "LINK",
+        "AVAX",
+        "CKES",
+        "XAUT",
+        "USDT",
+        "OP",
+      ];
+      const newBalances: any = {};
+      for (const token of tokens) {
+        const balance = await getBalance(chainId, token, walletAddress);
+        newBalances[token] = balance;
+      }
+      setBalances(newBalances);
+      // console.log(newBalances);
+      setLoading(false);
+    }
+    fetchBalances();
+  }, []);
+
+  useEffect(() => {
+    async function fetchDepositedBalances() {
+      setLoading(true);
+      const tokens = Object.keys(NetworkInformation[chainId].TOKEN);
+      const newBalances: Record<string, string> = {};
+      const newDepositedBalances: Record<string, string> = {};
+
+      for (const token of tokens) {
+        newBalances[token] = await getBalance(chainId, token, walletAddress);
+        newDepositedBalances[token] = await getDepositedAmount(
+          chainId,
+          token,
+          walletAddress
+        );
+      }
+
+      setBalances(newBalances);
+      setDepositedBalances(newDepositedBalances);
+      setLoading(false);
+    }
+    fetchDepositedBalances();
+  }, [walletAddress, chainId]);
+
+  useEffect(() => {
+    async function fetchEnsName() {
+      if (walletAddress) {
+        await web3Service.connect("mainnet"); // or whichever network you're using
+        const name = await web3Service.getEnsName(walletAddress);
+        setEnsName(name || "");
+      }
+    }
+    fetchEnsName();
+  }, [walletAddress]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <span className="loading loading-ring loading-md"></span>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="overflow-x-auto w-full mt-4">
@@ -47,8 +127,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.WBTC ? depositedBalances.WBTC : "--"}</td>
+              <td>{balances.WBTC ? balances.WBTC : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -75,8 +155,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.USDT ? depositedBalances.USDT : "--"}</td>
+              <td>{balances.USDT ? balances.USDT : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -103,8 +183,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.XAUT ? depositedBalances.XAUT : "--"}</td>
+              <td>{balances.XAUT ? balances.XAUT : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -131,8 +211,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.CKES ? depositedBalances.CKES : "--"}</td>
+              <td>{balances.CKES ? balances.CKES : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -159,8 +239,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.WETH ? depositedBalances.WETH : "--"}</td>
+              <td>{balances.WETH ? balances.WETH : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -187,8 +267,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.LINK ? depositedBalances.LINK : "--"}</td>
+              <td>{balances.LINK ? balances.LINK : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -215,8 +295,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.OP ? depositedBalances.OP : "--"}</td>
+              <td>{balances.OP ? balances.OP : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -243,8 +323,8 @@ function deposit() {
                   </div>
                 </div>
               </td>
-              <td>100</td>
-              <td>10</td>
+              <td>{depositedBalances.AVAX ? depositedBalances.AVAX : "--"}</td>
+              <td>{balances.AVAX ? balances.AVAX : "--"}</td>
               <th className="flex items-center gap-3 text-[#2e59d1]">
                 <button className="btn btn-ghost btn-sm">Deposit</button>
                 <button className="btn btn-ghost btn-sm">Withdraw</button>
@@ -253,8 +333,9 @@ function deposit() {
           </tbody>
         </table>
       </div>
+      <p>ENS Name: {ensName || "Not set"}</p>
     </div>
   );
 }
 
-export default deposit;
+export default Deposit;

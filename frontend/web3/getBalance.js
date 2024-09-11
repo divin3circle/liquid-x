@@ -5,16 +5,19 @@ const ERC20MockABI = require("../../contracts/abi/ERC20Mock.json");
 function getRpcUrl(chainId) {
   let rpcUrl;
   if (chainId == 80002) {
-    rpcUrl = POLYGON_AMOY_RPC_URL;
+    rpcUrl =
+      "https://polygon-amoy.g.alchemy.com/v2/HaWeDEs92KuCELR0HajFlS5pnzY4Qblj";
   } else if (chainId == 11155420) {
-    rpcUrl = OPTIMISM_SEPOLIA_RPC_URL;
+    rpcUrl =
+      "https://opt-sepolia.g.alchemy.com/v2/HaWeDEs92KuCELR0HajFlS5pnzY4Qblj";
   } else if (chainId == 84532) {
-    rpcUrl = BASE_SEPOLIA_RPC_URL;
+    rpcUrl =
+      "https://base-sepolia.g.alchemy.com/v2/HaWeDEs92KuCELR0HajFlS5pnzY4Qblj";
   }
   return rpcUrl;
 }
 
-function getProvider(chainId) {
+export function getProvider(chainId) {
   const rpcUrl = getRpcUrl(chainId);
   return new Web3(new Web3.providers.HttpProvider(rpcUrl));
 }
@@ -26,11 +29,16 @@ async function getBalance(chainId, tokenSymbol, walletAddress) {
     const tokenDecimals = tokenInfo.decimals;
     const tokenContract = new web3.eth.Contract(ERC20MockABI, tokenAddress);
     const balance = await tokenContract.methods.balanceOf(walletAddress).call();
-    const balanceFormat = balance / 10 ** tokenDecimals;
-    return balanceFormat.toString();
+
+    // Convert balance to BigInt and perform division
+    const balanceBigInt = BigInt(balance);
+    const divisor = BigInt(10 ** tokenDecimals);
+    const balanceFormatted = Number(balanceBigInt) / Number(divisor);
+
+    return balanceFormatted.toString();
   } catch (error) {
     console.error(`Error fetching balance for ${tokenSymbol}:`, error);
-    return "0";
+    return "-1";
   }
 }
 
@@ -43,9 +51,12 @@ async function main() {
   const avaxBalance = await getBalance(chainId, "AVAX", walletAddress);
   const ckesBalance = await getBalance(chainId, "CKES", walletAddress);
   const goldBalance = await getBalance(chainId, "XAUT", walletAddress);
+  const usdtBalance = await getBalance(chainId, "USDT", walletAddress);
   const opBalance = await getBalance(chainId, "OP", walletAddress);
 }
 
-module.exports = {
-  getBalance,
-};
+export default getBalance;
+
+// module.exports = {
+//   getBalance,
+// };

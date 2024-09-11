@@ -1,12 +1,14 @@
 import Web3 from "web3";
 import { NETWORKS, CONTRACTS } from "./contracts";
-import MainRouterABI from "../abis/MainRouter.json"; // Assuming you have the ABI for MainRouter
+import { BlockchainInteractions } from "./namespace";
+import { EnsService } from "./namespace";
 
 class Web3Service {
   constructor() {
     this.web3 = null;
     this.network = null;
     this.mainRouter = null;
+    this.ensService = null;
   }
 
   async connect(networkName) {
@@ -24,6 +26,8 @@ class Web3Service {
         );
       }
       console.log(`Connected to ${network.name}`);
+      this.mainRouter = new BlockchainInteractions.MainRouter(chainId);
+      this.ensService = new EnsService(chainId);
       return true;
     } catch (error) {
       console.error("Connection failed:", error);
@@ -91,6 +95,29 @@ class Web3Service {
   }
 
   // Add more methods as needed for your specific use cases
+
+  // Add ENS-related methods
+  async setEnsAddress(name, address) {
+    if (!this.ensService) throw new Error("ENS service not initialized");
+    return this.ensService.setAddress(name, address);
+  }
+
+  async getEnsAddress(name) {
+    if (!this.ensService) throw new Error("ENS service not initialized");
+    return this.ensService.getAddress(name);
+  }
+
+  async setEnsName(name) {
+    if (!this.ensService) throw new Error("ENS service not initialized");
+    return this.ensService.setName(name);
+  }
+
+  async getEnsName(address) {
+    if (!this.ensService) throw new Error("ENS service not initialized");
+    return this.ensService.getName(address);
+  }
+
+  // Add more ENS-related methods as needed
 }
 
 export default new Web3Service();

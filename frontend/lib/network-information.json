@@ -2,147 +2,157 @@
   "84532": {
     "name": "Base Sepolia",
     "CHAIN_SELECTOR": "10344971235874465080",
-    "DEPOSITOR_ADDRESS": "",
-    "MAIN_ROUTER_ADDRESS": "",
-    "MINTER_ADDRESS": "",
+    "DEPOSITOR_ADDRESS": "0x0d98C55d41f8b28d2E3BF3E3665308fAa032C73d",
+    "MAIN_ROUTER_ADDRESS": "0x0d98C55d41f8b28d2E3BF3E3665308fAa032C73d",
+    "MINTER_ADDRESS": "0xFc64C331d32267DbCBe81E386D55297baAe14aB8",
     "TOKEN": {
       "WBTC": {
         "name": "Wrapped Bitcoin",
         "decimals": 18,
-        "address": ""
+        "address": "0x5701139aE00FbB6060681803CD577d69053bB5b8"
       },
       "WETH": {
         "name": "Wrapped Ether",
         "decimals": 18,
-        "address": ""
+        "address": "0x979CCbA756D0AF02390cBCd039D186935Bd8C815"
       },
       "LINK": {
         "name": "Chainlink",
         "decimals": 18,
-        "address": ""
+        "address": "0xf4c2fb6fe04c6f99B36Fa9f0391971c4E5247afD"
       },
       "AVAX": {
         "name": "Avalanche",
         "decimals": 18,
-        "address": ""
+        "address": "0x93C6300dde76c66360E43B8e04bc7dcD35641944"
       },
-      "cKES": {
+      "CKES": {
         "name": "cKES",
         "decimals": 18,
-        "address": ""
+        "address": "0xC27EdEfA70C53135EC229F1EcC7c2219adA0914c"
       },
       "XAUT": {
         "name": "Gold",
         "decimals": 6,
-        "address": ""
+        "address": "0xE4a9eE5CBe3EBA7760Fe1DA4566cE97ef1fA5674"
       },
       "USDT": {
         "name": "Tether USD",
         "decimals": 6,
-        "address": ""
+        "address": "0x4D90A816133C48C90Db46881c92a73E4E91A09CB"
       },
       "DSC": {
         "name": "DSC",
         "decimals": 18,
-        "address": ""
+        "address": "0xEd270f83c58bc698bE7fCa3de4FF935069c6d431"
       }
     }
   },
   "80002": {
     "name": "Polygon Amoy",
     "CHAIN_SELECTOR": "16281711391670634445",
-    "DEPOSITOR_ADDRESS": "",
-    "MAIN_ROUTER_ADDRESS": "",
-    "MINTER_ADDRESS": "",
+    "DEPOSITOR_ADDRESS": "0xcc7ccB496a8fda44Ae146A53DCC915b814df3Cfd",
+    "MAIN_ROUTER_ADDRESS": "0xcc7ccB496a8fda44Ae146A53DCC915b814df3Cfd",
+    "MINTER_ADDRESS": "0x952F13984971588f3ed84718d72e3feBc7f665Af",
     "TOKEN": {
       "WBTC": {
         "name": "Wrapped Bitcoin",
         "decimals": 18,
-        "address": ""
+        "address": "0x5B1141AB6250e2c89A13Ed4E65EDfcDc088BB4b5"
       },
       "WETH": {
         "name": "Wrapped Ether",
         "decimals": 18,
-        "address": ""
+        "address": "0x85c16AB9B36c2b80a1Faef7E0fb5Ad86685BEBf9"
       },
       "LINK": {
         "name": "Chainlink",
         "decimals": 18,
-        "address": ""
+        "address": "0xC84Cb1F362A5c39B77D8D355012691bD32513183"
       },
       "AVAX": {
         "name": "Avalanche",
         "decimals": 18,
-        "address": ""
+        "address": "0x32BD7647043E3B72E2BA5492C74a7887600B2F99"
       },
-      "cKES": {
+      "CKES": {
         "name": "cKES",
         "decimals": 18,
-        "address": ""
+        "address": "0x976abA97272DC6bE8C93ea134FE273D8F9Bb99f2"
       },
       "XAUT": {
         "name": "Gold",
         "decimals": 6,
-        "address": ""
+        "address": "0x85fF250e0bFa6c32211489838A4B91B0EB9dB1FF"
       },
       "USDT": {
         "name": "Tether USD",
         "decimals": 6,
-        "address": ""
+        "address": "0x61c9f0Cc4213CBB609bA0E216D54470B0d498C68"
+      },
+      "OP": {
+        "name": "Optimism Sepolia",
+        "decimals": 6,
+        "address": "0x49F06a3C04430889FF7ce29D27D1672c82bbBA86"
       },
       "DSC": {
         "name": "DSC",
         "decimals": 18,
-        "address": ""
+        "address": "0x6594E76b07a47568FE786fa19d67b73467B2b80a"
       }
     }
   },
   "11155420": {
     "name": "Optimism Sepolia",
     "CHAIN_SELECTOR": "5224473277236331295",
-    "DEPOSITOR_ADDRESS": "",
-    "MAIN_ROUTER_ADDRESS": "",
-    "MINTER_ADDRESS": "",
+    "DEPOSITOR_ADDRESS": "0x961b2ae0Fb373f3a41E1f9a4be80028868c64483",
+    "MAIN_ROUTER_ADDRESS": "0x5A33f51C1D8595b8D3deb708bc8D116F403896ef",
+    "MINTER_ADDRESS": "0x8435A9E33ed2EC66E5aC063DA5055a67B6229a07",
     "TOKEN": {
       "WBTC": {
         "name": "Wrapped Bitcoin",
         "decimals": 18,
-        "address": ""
+        "address": "0x93C6300dde76c66360E43B8e04bc7dcD35641944"
       },
       "WETH": {
         "name": "Wrapped Ether",
         "decimals": 18,
-        "address": ""
+        "address": "0xC27EdEfA70C53135EC229F1EcC7c2219adA0914c"
       },
       "LINK": {
         "name": "Chainlink",
         "decimals": 18,
-        "address": ""
+        "address": "0xE4a9eE5CBe3EBA7760Fe1DA4566cE97ef1fA5674"
       },
       "AVAX": {
         "name": "Avalanche",
         "decimals": 18,
-        "address": ""
+        "address": " 0x4D90A816133C48C90Db46881c92a73E4E91A09CB"
       },
-      "cKES": {
+      "CKES": {
         "name": "cKES",
         "decimals": 18,
-        "address": ""
+        "address": "0xEd270f83c58bc698bE7fCa3de4FF935069c6d431"
       },
       "XAUT": {
         "name": "Gold",
         "decimals": 6,
-        "address": ""
+        "address": "0xdAa065d31736606d5bfa059EE528624eE379a73d"
       },
       "USDT": {
         "name": "Tether USD",
         "decimals": 6,
-        "address": ""
+        "address": "0xD898bc60Fc9d5837D86DE609100Af6Ea9825C035"
+      },
+      "OP": {
+        "name": "Optimism Sepolia",
+        "decimals": 6,
+        "address": " 0x9b5328599cEfEcd181b237f7138b298A9428692A"
       },
       "DSC": {
         "name": "DSC",
         "decimals": 18,
-        "address": ""
+        "address": "0xA2357ff6B2f4F34e66688709923303E217c4A525"
       }
     }
   }
