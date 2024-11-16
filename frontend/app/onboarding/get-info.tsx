@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/select";
 import eth from "../../public/eth.svg";
 import bsc from "../../public/base.svg";
+import lisk from "../../public/Lisk.svg";
 import pol from "../../public/polygon.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -111,7 +112,7 @@ function GetUserInformation() {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="ethereum" className="">
+                      {/* <SelectItem value="ethereum" className="">
                         <div className="flex items-center gap-2">
                           <Image
                             src={eth}
@@ -120,6 +121,17 @@ function GetUserInformation() {
                             height={10}
                           />
                           <h1>Ethereum</h1>
+                        </div>
+                      </SelectItem> */}
+                      <SelectItem value="ethereum" className="">
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={lisk}
+                            alt="ethereum"
+                            width={10}
+                            height={10}
+                          />
+                          <h1>Lisk</h1>
                         </div>
                       </SelectItem>
                       <SelectItem value="bsc">

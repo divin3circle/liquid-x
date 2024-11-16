@@ -4,6 +4,7 @@ import base from "../../../public/base.svg";
 import op from "../../../public/optimism.svg";
 import ethereum from "../../../public/eth.svg";
 import avalanche from "../../../public/avalanche.svg";
+import lisk from "../../../public/Lisk.svg";
 
 import {
   Select,
@@ -29,8 +30,8 @@ export function SelectScrollable() {
         <SelectGroup>
           <SelectItem value="est" className="flex items-center justify-center">
             <div className="flex items-center gap-2">
-              <Image src={ethereum} alt="ethereum" width={16} height={16} />
-              <p>Sepolia</p>
+              <Image src={lisk} alt="ethereum" width={16} height={16} />
+              <p>LSK</p>
             </div>
           </SelectItem>
           <SelectItem value="cst">
