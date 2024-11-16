@@ -1,0 +1,9 @@
+{
+  "sites": [
+    {
+      "slug": "loud-angle-broad",
+      "distDir": "out",
+      "buildCommand": "npm install && npm run build"
+    }
+  ]
+}

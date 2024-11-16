@@ -9,6 +9,7 @@ import optimism from "../../../public/optimism.svg";
 import eth from "../../../public/eth.svg";
 import bnb from "../../../public/base.svg";
 import avalanche from "../../../public/avalanche.svg";
+import lisk from "../../../public/Lisk.svg";
 
 export function CommunityBNB() {
   return (
@@ -16,12 +17,12 @@ export function CommunityBNB() {
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
-      <CardTitle>BNB</CardTitle>
+      <CardTitle>LSK</CardTitle>
       <CardDescription>
-        Base Chain is an Ethereum Layer-2 blockchain network developed by
-        Coinbase. It is designed to improve scalability, performance, and
-        interoperability while reducing transaction costs and settlement time on
-        the Ethereum network.
+        Lisk is a blockchain application platform that enables its developers to
+        create, distribute, and manage decentralized blockchain applications by
+        deploying their own sidechain linked to the Lisk network, including a
+        custom token.
       </CardDescription>
     </Card>
   );
@@ -91,7 +92,7 @@ const Skeleton = () => {
           <Image src={eth} width={30} height={30} alt="polygon" />
         </Container>
         <Container className="circle-3">
-          <Image src={bnb} width={50} height={50} alt="polygon" />
+          <Image src={lisk} width={50} height={50} alt="polygon" />
         </Container>
         <Container className="h-12 w-12 circle-4">
           <Image src={polygon} width={30} height={30} alt="polygon" />
