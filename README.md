@@ -89,39 +89,28 @@ Liquid-X's initial support will focus on commonly used tokens such as ETH, USDT,
 - **Incentive Programs**: Offer incentives like liquidity mining and rewards for early adopters.
 
 
-## Bounties Targeting
+## Bounties Targeting: Lisk
 
-### 1. The Graph & GraphQL
+### The Graph & GraphQL on Lisk
 
-- Implement GraphQL for efficient data querying from Uniswap tvl data
-- Integrate The Graph for blockchain data indexing
-- Developed subgraphs that indexed Liquid-X's lending and borrowing events
+- **GraphQL Implementation**: Used GraphQL to enable efficient data querying on the Lisk blockchain, focused on Liquid-X’s lending and borrowing activities.
+- **Custom Indexing Solution**: Since The Graph is not natively supported on Lisk, a custom indexing solution was developed to capture on-chain data, specifically Liquid-X address mappings, token burn events, and price feed updates.
+- **Data Indexing Modules**:
+   - **Address Mappings Module**: Indexes Liquid-X-related addresses on Lisk, facilitating seamless data access.
+   - **Burn Events Module**: Tracks token burn events within Liquid-X to monitor liquidity changes.
+   - **Price Feed Module**: Provides accurate, real-time asset pricing data on Lisk to support lending and borrowing activities.
 
-#### Subgraph Development
+### Liquid-X Deployment on Lisk
 
-1. [liquidx-addresses](https://thegraph.com/studio/subgraph/liquidx-adresses/endpoints)
-1. [liquidx-burns](https://api.studio.thegraph.com/proxy/88585/liquidx/version/latest/graphql)
-1. [pricefeedsv0.0.1](https://api.studio.thegraph.com/proxy/88585/pricefeeds-liquidx-v1/v0.0.1/graphql)
+- **Lisk Testnet Deployment**: Deployed Liquid-X contracts on the Lisk testnet, with production deployment on the Lisk mainnet, making it a core network for Liquid-X’s operations.
+- **Custom Communication Layer**: Implemented a custom messaging protocol to handle communication between Lisk and other blockchain networks, enabling efficient cross-chain lending and borrowing.
 
-### 2. Optimism
+### Lisk SDK & JavaScript Integration
 
-- Deployed LiquidX subgraphs on the Optimism testnet
-- LiquidX main router is deployed on the Optimism mainnet, hence all communication between other EVM chains and LiquidX is done through the Optimism chain.
+- **Lisk SDK**: Utilized Lisk SDK to build, deploy, and manage smart contract modules on Lisk, ensuring compatibility and scalability across the Lisk network.
+- **JavaScript for Blockchain Interactions**: Integrated JavaScript libraries to facilitate interactions with the Lisk blockchain, streamlining user experiences on Liquid-X.
+- **Custom Naming System**: Implemented a namespace-based address naming system on Lisk to allow users to customize and manage their addresses within Liquid-X.
 
-### 3. Base
-
-- Depositor and minter contracts are deployed on the Base testnet, allowing users to borrow and deposit assets on the Base chain without selling their assets on other chains.
-
-### Web3JS
-
-- Web3JS is used to interact with the blockchain and the smart contracts.
-- Deployed LiquidX on fleek
-- Implemented namespace to set custom names representing addresses
-
-### SafariDAO
-
-- The project implements a robust protocol for cross-chain lending and borrowing, providing users with the ability to lend and borrow assets across different blockchain networks that plans to add RWAs as collateral to allow more users to access DeFi.
-- The project is designed to be a decentralized and secure platform for lending and borrowing assets across different blockchain networks, providing users with the ability to lend and borrow assets across different blockchain networks.
 
 
 ## Contributing
