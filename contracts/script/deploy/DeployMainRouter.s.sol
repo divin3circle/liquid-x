@@ -20,12 +20,13 @@ contract DeployMainRouter is Script, Parameters {
         mainRouter.setSubscriptionID(OPTIMISM_SEPOLIA_SUBSCRIPTION_ID);
         TokenConfig tokensConfig = new TokenConfig();
 
+        addAllowedToken(mainRouter, tokensConfig.getLiskSepoliaToken())
         addAllowedToken(mainRouter, tokensConfig.getAvalancheFujiToken());
         addAllowedToken(mainRouter, tokensConfig.getEthereumSepoliaToken());
         addAllowedToken(mainRouter, tokensConfig.getPolygonAmoyToken());
         addAllowedToken(mainRouter, tokensConfig.getBaseSepoliaToken());
         addAllowedToken(mainRouter, tokensConfig.getOptimismSepoliaToken());
-        addAllowedToken(mainRouter, tokensConfig.getArbitrumSepoliaToken());
+       
 
         mainRouter.setAllowedDestinationChain(
             CHAIN_SELECTOR_AVALANCHE_FUJI,

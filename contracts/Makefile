@@ -8,7 +8,7 @@ update_abi:
 	@forge build --silent && jq '.abi' out/$(CONTRACT).sol/$(CONTRACT).json > abi/$(CONTRACT).json
 
 deploy_main_router:
-	@forge script script/deploy/DeployMainRouter.s.sol:DeployMainRouter --rpc-url $(OPTIMISM_SEPOLIA_RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast --verify --etherscan-api-key $(OPTIMISM_API_KEY) -vvvv
+	@forge script script/deploy/DeployMainRouterLisk.s.sol:DeployMainRouter --rpc-url $(LISK_SEPOLIA_RPC_URL) --account $(ACCOUNT) --sender $(OWNER_ADDRESS) --broadcast 
 
 # Target for Optimism Sepolia
 deploy_depositor:
